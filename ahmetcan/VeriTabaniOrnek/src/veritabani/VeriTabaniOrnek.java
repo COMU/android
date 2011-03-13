@@ -4,6 +4,8 @@ import java.sql.*;
 public class VeriTabaniOrnek {
 
 	public static void main(String[] args) {
+		
+		Statement stmt;
 
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -14,7 +16,16 @@ public class VeriTabaniOrnek {
         }
         try {
             //Connection conn =DriverManager.getConnection("jdbc:mysql://localhost/misafir?","root","123456");
-    		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/misafir?" +"user=root&password=123456");
+    		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/veri_tabani_adi?" +"user=kullanici_adi&password=parola");
+    	    //Get a Statement object
+    	    stmt = conn.createStatement();
+    	    String sql = "SELECT * FROM uc";
+    	    ResultSet result = stmt.executeQuery(sql);
+    	    while (result.next())
+    	    {
+    	    	System.out.println(result.getString(1));
+    	    }
+    		conn.close();
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());

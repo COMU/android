@@ -16,7 +16,6 @@ public class VeriTabaniOrnek {
         }
         try {
             //Connection conn =DriverManager.getConnection("jdbc:mysql://localhost/misafir?","root","123456");
-<<<<<<< .mine
     		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/veri_tabani_adi?" +"user=kullanici_adi&password=parola");
     	    //Get a Statement object
     	    stmt = conn.createStatement();
@@ -27,18 +26,6 @@ public class VeriTabaniOrnek {
     	    	System.out.println(result.getString(1));
     	    }
     		conn.close();
-=======
-    		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost/veri_tabani_adi?" +"user=kullanici_adi&password=parola");
-    	    //Get a Statement object
-    	    stmt = conn.createStatement();
-    	    String sql = "SELECT * FROM uc";
-    	    ResultSet result = stmt.executeQuery(sql);
-    	    while (result.next())
-    	    {
-    	    	System.out.println(result.getString(1));
-    	    }
-    		conn.close();
->>>>>>> .r11
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());

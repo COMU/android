@@ -15,6 +15,7 @@ import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Gps extends Activity {
     /** Called when the activity is first created. */
@@ -33,10 +34,21 @@ public class Gps extends Activity {
         latitude=(TextView)findViewById(R.id.lat);
         longitude=(TextView)findViewById(R.id.longi);
         country=(TextView)findViewById(R.id.country);
-        
         locationManager=(LocationManager)getSystemService(Context.LOCATION_SERVICE);
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-        		10 * 1000, (float) 10.0,new myLocationListener());
+        
+        if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+        	locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+            		10 * 1000, (float) 10.0,new myLocationListener());
+        	Toast.makeText(getApplicationContext(),LocationManager.GPS_PROVIDER,Toast.LENGTH_SHORT).show();
+        	country.setText(LocationManager.GPS_PROVIDER);
+        }
+        if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+        	locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+            		10 * 1000, (float) 10.0,new myLocationListener());
+        	Toast.makeText(getApplicationContext(),LocationManager.NETWORK_PROVIDER,Toast.LENGTH_SHORT).show();
+        	country.setText(LocationManager.NETWORK_PROVIDER);
+        }
+        
         
         geocoder = new Geocoder(this);
        

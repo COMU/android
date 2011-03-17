@@ -1,8 +1,7 @@
 package com.location;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
+
+
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -19,14 +18,14 @@ import android.widget.Toast;
 
 public class Gps extends Activity {
     /** Called when the activity is first created. */
-    
-	private LocationManager locationManager;
+    private Coordinates coordinate;
+    private myAddress address;
+	private Geocoderapi geocoder;
+    private LocationManager locationManager;
 	private TextView latitude;
 	private TextView longitude;
 	private TextView country;
-	private List<Address> addresses;
 	private Location currentLocation;
-	private Geocoder geocoder;
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,24 +49,22 @@ public class Gps extends Activity {
         }
         
         
-        geocoder = new Geocoder(this);
+        
        
     }
-	Thread t;
+	
 	private void uptadeLocationText(){
 		latitude.setText(Double.toString(currentLocation.getLatitude()));
 		longitude.setText(Double.toString(currentLocation.getLongitude()));
+		geocoder=new Geocoderapi();
+		coordinate=new Coordinates(Double.toString(currentLocation.getLatitude())
+				,Double.toString(currentLocation.getLongitude()));
+		address=geocoder.geocode(coordinate);
+		if(address==null)
+		     country.setText("null");
+		else
+			country.setText(address.getCountry());
 		
-		try {
-			addresses=geocoder.getFromLocation(currentLocation.getLatitude(),
-					currentLocation.getLongitude(),1);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(addresses!=null){
-			country.setText(addresses.get(0).getCountryName());
-		}
 	}
 	
 	private class myLocationListener  implements LocationListener{

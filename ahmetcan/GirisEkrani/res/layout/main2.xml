@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="#ccccff"
+    >
+    <TableRow> 
+        <TextView 
+        	android:layout_y="125px"
+            android:text="@string/name"
+            android:width ="120px"
+            android:textStyle="bold"
+            android:textColor="#000033"
+            />
+        <EditText 
+            android:id="@+id/txtName" 
+            android:width="200px" />
+    </TableRow> 
+    <TableRow>
+        <TextView 
+            android:text="@string/surname"
+            android:textStyle="bold"
+            android:textColor="#000033"
+            />
+        <EditText 
+            android:id="@+id/txtSurname" 
+            />
+    </TableRow>
+    
+    <TableRow>
+        <TextView 
+            android:text="@string/emailadress"
+            android:textStyle="bold"
+            android:textColor="#000033"
+            />
+        <EditText 
+            android:id="@+id/txtEmail" 
+            android:width="200px" 
+            />
+    </TableRow>
+
+    <TableRow>
+        <Button 
+            android:id="@+id/buttonSignIn" 
+            android:text="Kaydol"
+            android:paddingRight="5px" />
+    </TableRow>
+</TableLayout>

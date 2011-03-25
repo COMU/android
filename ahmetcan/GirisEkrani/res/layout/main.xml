@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent" 
+    android:layout_width="fill_parent"
+    android:background="#ccccff"
+    >
+   <TableRow> 
+        <TextView 
+        	android:layout_y="125px"
+            android:text="@string/userName"
+       		 android:textColor="#000033"
+             android:textStyle="bold"
+             android:gravity="center_horizontal"
+            /></TableRow>
+             <TableRow>
+        <EditText 
+            android:id="@+id/txtUserName" 
+            android:width="200px"
+            android:layout_gravity="center_horizontal" />
+    </TableRow> 
+    <TableRow>
+        <TextView 
+            android:text="@string/password"
+             android:textStyle="bold"
+              android:textColor="#000033"
+              android:gravity="center"
+            />
+            </TableRow>
+            <TableRow>
+        <EditText 
+            android:id="@+id/txtPassword" 
+            android:password="true" 
+            android:gravity="center_horizontal"
+            />
+    </TableRow>
+    <TableRow>
+    <TextView
+    android:id="@+id/forgetPasswd"
+    android:onClick="true"
+    android:textColor="#000033"
+    android:text="parolami unuttum"
+    android:textStyle="bold"
+    android:clickable="true"
+    />
+    </TableRow>
+    <TableRow>
+        <Button 
+            android:id="@+id/buttonLogIn" 
+            android:text="Giris"
+        
+             android:textColor="#000033"
+            android:paddingRight="5px" />
+    </TableRow>
+    <TableRow>
+    	<Button 
+    	  android:id="@+id/buttonSignIn" 
+          android:text="Kaydol"
+          android:textColor="#000033"
+          android:layout_width="125dip"
+          android:layout_height="wrap_content"  
+    	/>
+    </TableRow>
+</TableLayout>

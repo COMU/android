@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, GirisEkrani!</string>
+    <string name="app_name">evci</string>
+    <string name="userName">Kullanici Adi:</string>
+    <string name="password">Parola:</string>
+    <string name="name">Adiniz:</string>
+    <string name="surname">Soyadiniz:</string>
+    <string name="emailadress">E-mail</string>
+</resources>

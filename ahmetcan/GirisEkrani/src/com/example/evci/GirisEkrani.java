@@ -28,7 +28,7 @@ public class GirisEkrani extends Activity {
         Button signIn = (Button) findViewById(R.id.buttonSignIn);
         signIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), KayitOl.class);
+                Intent myIntent = new Intent(GirisEkrani.this, KayitOl.class);
                 startActivityForResult(myIntent, 0);
             }
 

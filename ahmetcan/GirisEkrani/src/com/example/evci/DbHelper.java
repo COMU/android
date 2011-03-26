@@ -40,17 +40,16 @@ public class DbHelper {
 	
 	public List<String> selectAll(){
 		List<String> list = new ArrayList<String>();
-		Cursor cursor=this.db.query(TABLE_NAME, new String[]{"name"}, 
+		Cursor cursor=this.db.query(TABLE_NAME, new String[]{"name,tarih"}, 
 				null, null,null,null, "name desc");
 		if(cursor.moveToFirst()){
 			do{
-				list.add(cursor.getString(0));
+				list.add(cursor.getString(0)+cursor.getString(1));
 			}while(cursor.moveToNext());
 		}
 		if(cursor != null && !cursor.isClosed()){
 			cursor.close();
 		}
-		
 		return list;
 	}
 	private static class OpenHelper extends SQLiteOpenHelper {
@@ -62,7 +61,7 @@ public class DbHelper {
 
 		@Override
 		public void onCreate(SQLiteDatabase db) {
-			db.execSQL("CREATE TABLE "+TABLE_NAME+" (id INTEGER PRIMARY KEY,name TEXT,tarih TEXT)");
+			db.execSQL("CREATE TABLE "+TABLE_NAME+"(id INTEGER PRIMARY KEY,name TEXT,tarih TEXT)");
 
 		}
 

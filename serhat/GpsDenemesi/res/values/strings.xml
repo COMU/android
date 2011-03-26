@@ -5,4 +5,8 @@
 	<string name="country">Country :</string>
     <string name="hello">Hello World, Gps!</string>
     <string name="app_name">LocationFinder</string>
+    <string name="pass_text">Enter Password</string>
+    <string name="pass_text2">Enter Password Again</string>
+    <string name="date_text">Your Birthday</string>
+    <string name="city">City</string>
 </resources>

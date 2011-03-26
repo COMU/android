@@ -34,12 +34,16 @@ public class YahooXmlReader {
 				 Node node = nodeList.item(i);
 
 
+				 
 				 Element fstElmnt = (Element) node;
 				 NodeList nameList = fstElmnt.getElementsByTagName("country");
 				 Element nameElement = (Element) nameList.item(0);
 				 nameList =  nameElement.getChildNodes();
 				 address.setCountry( ((Node) nameList.item(0)).getNodeValue());
-
+				 NodeList lstNmElmntLst = fstElmnt.getElementsByTagName("county");
+				 Element lstNmElmnt = (Element) lstNmElmntLst.item(0);
+		         NodeList lstNm = lstNmElmnt.getChildNodes();
+   				 address.setCity(((Node) lstNm.item(0)).getNodeValue());
 
 			}
 

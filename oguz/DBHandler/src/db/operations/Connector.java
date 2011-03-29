@@ -15,12 +15,12 @@ public class Connector {
 	private String dbname;
 	private Statement stmt;
 	
-	public void connector()
+	public Connector()
 	{
 		Properties properties = new Properties();
 		try 
 		{
-			properties.load(new FileInputStream("db.conf"));
+			properties.load(new FileInputStream("./db.conf"));
 		} catch (FileNotFoundException e) 
 		{
 			// TODO Auto-generated catch block
@@ -35,7 +35,12 @@ public class Connector {
 		this.setUsername(properties.getProperty("username"));
 		this.setPassword(properties.getProperty("password"));
 		this.setDBname(properties.getProperty("dbname"));
-		
+//		this.setDriver("mysql");
+//		this.setHostname("localhost");
+//		this.setUsername("root");
+//		this.setPassword("serhat");
+//		this.setDBname("ahbap_db");
+//		
 	}
 
 	public Boolean connect()
@@ -45,7 +50,8 @@ public class Connector {
 		{
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
-				String query_string = "jdbc:mysql://" + this.getHostname() + "/" + this.getDBname() + "?" + "user=" + this.getUsername() + "&=" + this.getPassword(); 
+				String query_string = "jdbc:mysql://" + this.getHostname() + "/" + this.getDBname() + "?" + "user=" + this.getUsername() + "&password=" + this.getPassword(); 
+				System.out.println(query_string);
 				Connection conn=DriverManager.getConnection(query_string);
 				this.stmt = conn.createStatement();
 				return true;
@@ -58,7 +64,7 @@ public class Connector {
 		}
 		return false;
 	}
-
+	
 	public void setUsername(String username) {
 		this.username = username;
 	}

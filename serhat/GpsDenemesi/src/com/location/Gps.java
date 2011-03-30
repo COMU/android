@@ -6,6 +6,10 @@ import java.net.SocketException;
 import java.util.Calendar;
 import java.util.Enumeration;
 
+
+
+
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -60,7 +64,7 @@ public class Gps extends Activity {
 		dialog.setMessage("Getting location information");
 		dialog.show();
 		MyLocationManager myLocation = new MyLocationManager();
-		myLocation.getLocation(this, locationResult);
+		myLocation.getLocation(Gps.this, locationResult);
 
 		final Calendar c = Calendar.getInstance();
 		mYear = c.get(Calendar.YEAR);

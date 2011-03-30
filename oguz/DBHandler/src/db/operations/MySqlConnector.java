@@ -29,6 +29,15 @@ public class MySqlConnector extends Connector {
 			return false;
 		}
 		return true;
+		return true;
+		
 	}
+	
+	public String[] select (tblname)
+	{
+		//select * from tblname
+		
+	}
+	
 
 }

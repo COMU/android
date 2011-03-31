@@ -1,5 +1,6 @@
 package db.operations;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,8 +9,8 @@ import java.sql.*;
 
 public class Connector {
 	
-	private String driver = "mysql";
-	private String hostname = "localhost";
+	private String driver = "";
+	private String hostname = "";
 	private String username;
 	private String password;
 	private String dbname;
@@ -18,9 +19,10 @@ public class Connector {
 	public Connector()
 	{
 		Properties properties = new Properties();
+		File f=new File("conf/db.properties");
 		try 
 		{
-			properties.load(new FileInputStream("./db.conf"));
+			properties.load(new FileInputStream(f));
 		} catch (FileNotFoundException e) 
 		{
 			// TODO Auto-generated catch block
@@ -40,13 +42,13 @@ public class Connector {
 //		this.setUsername("root");
 //		this.setPassword("serhat");
 //		this.setDBname("ahbap_db");
-//		
+		
 	}
 
 	public Boolean connect()
 	{
-		
-		if (this.driver == "mysql")
+		String s="mysql";
+		if (driver.equals(s) == true)
 		{
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();

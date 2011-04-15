@@ -8,19 +8,18 @@ from sehirHandler import SehirHandler
 from ulkeHandler import UlkeHandler
 from konumHandler import KonumHandler
 from kullaniciHandler import KullaniciHandler
-from egitimDurumuHandler import EgitimDurumuHandler
-from ilgiAlanlariHandler import IlgiAlanlariHandler
+from egitimDurumHandler import EgitimDurumuHandler
+from emailHandler import EmailHandler
 
-ilgi_handler = Resource(IlgiAlanlariHandler)
-egitim_handler = Resource(EgitimDurumHandler)
+email_handler = Resource(EmailHandler)
+egitim_handler = Resource(EgitimDurumuHandler)
 kullanici_handler = Resource(KullaniciHandler)
 meslek_handler = Resource(MeslekHandler)
 sehir_handler = Resource(SehirHandler)
 ulke_handler = Resource(UlkeHandler)
 konum_handler = Resource(KonumHandler)
 urlpatterns = patterns('',
-     url(r'^ilgi/(?P<ilgi_id>[^/]+)', ilgi_handler),
-     url(r'^ilgi/', ilgi_handler),
+    url(r'^email/(?P<emailadress>[^/]+)',email_handler),
      url(r'^egitim/(?P<egitim_id>[^/]+)', egitim_handler),
      url(r'^egitim/', egitim_handler),
      url(r'^kullanici/(?P<kullanici_id>[^/]+)', kullanici_handler),

@@ -19,6 +19,6 @@ class EgitimDurumuHandler(BaseHandler):
         #uptade 
         return rc.ALL_OK
 
-    def create(self.request):
+    def create(self,request):
         EgitimDurumu.objects.create(adi=request.POST.get("egitim_durumu"))
         return rc.CREATED

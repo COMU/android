@@ -12,7 +12,7 @@ from egitimDurumuHandler import EgitimDurumuHandler
 from ilgiAlanlariHandler import IlgiAlanlariHandler
 
 ilgi_handler = Resource(IlgiAlanlariHandler)
-egitim_handler = Resource(EgitimDurumuHandler)
+egitim_handler = Resource(EgitimDurumHandler)
 kullanici_handler = Resource(KullaniciHandler)
 meslek_handler = Resource(MeslekHandler)
 sehir_handler = Resource(SehirHandler)

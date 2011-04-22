@@ -21,6 +21,6 @@ class KullaniciHandler(BaseHandler):
                 boylam=request.POST.get("boylam"),
                 sehir=Sehir.objects.get(adi=request.POST.get("sehir_adi")),
                 ulke=Ulke.objects.get(adi=request.POST.get("ulke_adi")))
-        Kullanici.objects.create(ad=request.POST.get("ad"),
+        Kullanici.objects.create(user_id=request.POST.get("auth_id"),ad=request.POST.get("ad"),
                 soyad=request.POST.get("soyad"),dogum_tarihi=request.POST.get("dogum_tarihi"),email=request.POST.get("email"),parola=request.POST.get("parola"),konum=mKonum)
         return rc.CREATED

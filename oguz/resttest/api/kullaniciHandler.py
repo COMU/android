@@ -14,7 +14,13 @@ class KullaniciHandler(BaseHandler):
         else:
             return Kullanici.objects.all()
     def uptade(self,request,kullanici_id):
-        #ici bos
+        kullanici = Kullanici.objects.get(id = kullanici_id)
+        kullanici.adi = request.PUT.get("ad")
+        kullanici.soyad = request.PUT.get("soyad")
+        kullanici.dogum_tarihi = request.PUT.get("dogum_tarihi")
+        kullanici.email = request.PUT.get("email")
+        kullanici.parola = request.PUT.get("parola")
+        kullanici.save()
         return rc.ALL_OK
     def create(self,request):
         mKonum=Konum.objects.create(enlem=request.POST.get("enlem"),

@@ -17,7 +17,11 @@ class KonumHandler(BaseHandler):
             return base.objects.all()
     def uptade(self,request,konum_id):
         konum=Konum.objects.get(id=konum_id)
-        return "Doldur...."
+        konum.enlem = request.PUT.get("enlem")
+        konum.boylam = request.PUT.get("boylam")
+        konum.sehir = Sehir.objects.get(adi = request.PUT.get("sehir_adi"))
+        konum.ulke = Ulke.objects.get(adi = request.PUT.get("ulke_adi"))
+        return rc.ALL_OK
     def create(self,request):
         konum=Konum.objects.create(enlem=request.POST.get("enlem"),
                 boylam=request.POST.get("boylam"), 

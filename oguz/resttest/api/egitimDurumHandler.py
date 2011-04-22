@@ -16,7 +16,8 @@ class EgitimDurumuHandler(BaseHandler):
             return EgitimDurumu.objects.all()
     
     def uptade(self,request,egitim_id):
-        #uptade 
+        egitim_durumu = EgitimDurumu.objects.get(id = egitim_id)
+        egitim_durumu.adi = request.PUT.get("egitim_durumu") 
         return rc.ALL_OK
 
     def create(self,request):

@@ -15,7 +15,7 @@ class IlgiAlanlariHandler(BaseHandler):
             return IlgiAlanlari.objects.all()
     def uptade(self,request, ilgi_id):
         ilgi=IlgiAlanlari.objects.get(id = ilgi_id)
-        #islemler
+        ilgi.adi = request.PUT.get("adi")
         ilgi.save()
         return rc.ALL_OK
     def create(self, request):

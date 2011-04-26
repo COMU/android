@@ -30,7 +30,9 @@ public class mailsender extends Activity {
 				m.setTo(toArr);
 				m.setSubject(subject.getText().toString());
 				m.setBody(body.getText().toString());
-
+				Toast.makeText(mailsender.this,
+						"mailadress: "+emailadress.toString(),
+						Toast.LENGTH_LONG).show();
 				try {
 
 					if (m.send()) {

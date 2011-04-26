@@ -3,28 +3,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="fill_parent" 
     android:layout_width="fill_parent"
-    android:background="#ccccff"
+    android:background="#000000"
+    
     >
    <TableRow> 
         <TextView 
-        	android:layout_y="125px"
             android:text="@string/userName"
-       		 android:textColor="#000033"
+       		 android:textColor="#ffffff"
              android:textStyle="bold"
              android:gravity="center_horizontal"
+             android:layout_weight="0.5"
+  
             /></TableRow>
              <TableRow>
         <EditText 
             android:id="@+id/txtUserName" 
             android:width="200px"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+             android:layout_weight="0.5"
+             />
     </TableRow> 
     <TableRow>
         <TextView 
             android:text="@string/password"
              android:textStyle="bold"
-              android:textColor="#000033"
+              android:textColor="#ffffff"
               android:gravity="center"
+            android:layout_weight="0.5"
+          
             />
             </TableRow>
             <TableRow>
@@ -32,14 +38,18 @@
             android:id="@+id/txtPassword" 
             android:password="true" 
             android:gravity="center_horizontal"
+            android:layout_weight="0.5"
             />
     </TableRow>
     <TableRow>
     <TextView
     android:id="@+id/forgetPasswd"
     android:onClick="true"
-    android:textColor="#000033"
+    android:textColor="#ffffff"
     android:text="parolami unuttum"
+    android:layout_weight="0.5"
+    android:layout_height="35dip"
+    android:gravity="center"
     android:textStyle="bold"
     android:clickable="true"
     />
@@ -48,7 +58,7 @@
         <Button 
             android:id="@+id/buttonLogIn" 
             android:text="Giris"
-        
+        android:layout_weight="0.5"
              android:textColor="#000033"
             android:paddingRight="5px" />
     </TableRow>
@@ -59,6 +69,9 @@
           android:textColor="#000033"
           android:layout_width="125dip"
           android:layout_height="wrap_content"  
+    	android:layout_weight="0.5"
+    	
+    	android:textColorHighlight="#FFFFFF"
     	/>
     </TableRow>
 </TableLayout>

@@ -44,6 +44,7 @@
         <Button 
             android:id="@+id/buttonSignIn" 
             android:text="Kaydol"
-            android:paddingRight="5px" />
+            android:paddingRight="5px"
+             />
     </TableRow>
 </TableLayout>

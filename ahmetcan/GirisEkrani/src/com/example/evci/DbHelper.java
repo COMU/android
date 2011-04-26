@@ -20,7 +20,7 @@ public class DbHelper {
 
 	private SQLiteStatement insertStatement;
 	public static final String INSERT = "insert into " + TABLE_NAME
-			+ "(name,tarih) Values (?,?)";
+			+ "(userid,name,tarih) Values (?,?,?)";
 
 	public DbHelper(Context context){
 		this.context=context;
@@ -28,9 +28,10 @@ public class DbHelper {
 		this.db=openHelper.getWritableDatabase();
 		this.insertStatement=db.compileStatement(INSERT);
 	}
-	public long insert(String name,String tarih){
-		this.insertStatement.bindString(1, name);
-		this.insertStatement.bindString(2, tarih);
+	public long insert(String userid,String name,String tarih){
+		this.insertStatement.bindString(1, userid);
+		this.insertStatement.bindString(2, name);
+		this.insertStatement.bindString(3, tarih);
 		return this.insertStatement.executeInsert();
 	}
 	
@@ -40,7 +41,7 @@ public class DbHelper {
 	
 	public List<String> selectAll(){
 		List<String> list = new ArrayList<String>();
-		Cursor cursor=this.db.query(TABLE_NAME, new String[]{"name,tarih"}, 
+		Cursor cursor=this.db.query(TABLE_NAME, new String[]{"userid,name,tarih"}, 
 				null, null,null,null, "name desc");
 		if(cursor.moveToFirst()){
 			do{

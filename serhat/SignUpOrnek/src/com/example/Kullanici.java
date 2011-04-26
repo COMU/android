@@ -1,12 +1,20 @@
 package com.example;
 
 public class Kullanici {
+	private String key;
 	private String adi;
 	private String soyad;
 	private String dogumTarihi;
 	private Konum konum;
 	private String email;
 	private String parola;
+	
+	public String getKey() {
+		return key;
+	}
+	public void setKey(String key) {
+		this.key = key;
+	}
 	
 	public String getAdi() {
 		return adi;

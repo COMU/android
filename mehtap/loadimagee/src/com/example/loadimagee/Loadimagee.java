@@ -60,9 +60,7 @@ public class Loadimagee extends Activity {
         	   textFile.setText("Full Path: \n" + FilePath + "\n");
         	   textFolder.setText("Folder: \n" + Folder + "\n");
         	   textFileName.setText("File Name: \n" + FileName + "\n");
-        	   Filename thisFile = new Filename(FileName);
-        	   textFileName_WithoutExt.setText("Filename without Ext: " + thisFile.getFilename_Without_Ext());
-        	         textFileName_Ext.setText("Ext: " + thisFile.getExt());
+        	  
         	  
         	  }
         	  }

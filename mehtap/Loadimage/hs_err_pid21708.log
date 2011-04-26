@@ -1,0 +1,228 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (classFileParser.cpp:3375), pid=21708, tid=3064228752
+#  Error: ShouldNotReachHere()
+#
+# JRE version: 6.0_24-b07
+# Java VM: Java HotSpot(TM) Server VM (19.1-b02 mixed mode linux-x86 )
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x09e16c00):  JavaThread "Unknown thread" [_thread_in_vm, id=21714, stack(0xb69f6000,0xb6a47000)]
+
+Stack: [0xb69f6000,0xb6a47000],  sp=0xb6a457f0,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x708370]
+V  [libjvm.so+0x2e8b5f]
+V  [libjvm.so+0x28167a]
+V  [libjvm.so+0x287711]
+V  [libjvm.so+0x699342]
+V  [libjvm.so+0x6973de]
+V  [libjvm.so+0x6961a6]
+V  [libjvm.so+0x695e10]
+V  [libjvm.so+0x69ac2a]
+V  [libjvm.so+0x69acbc]
+V  [libjvm.so+0x69ad80]
+V  [libjvm.so+0x69ab69]
+V  [libjvm.so+0x6e0aba]
+V  [libjvm.so+0x6e217f]
+V  [libjvm.so+0x3a94f8]
+V  [libjvm.so+0x6c9c8d]
+V  [libjvm.so+0x4025f6]
+C  [java+0x305c]
+C  [java+0x1942]  JavaMain+0x72
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x09e16c00 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=21714, stack(0xb69f6000,0xb6a47000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Dynamic libraries:
+08048000-08052000 r-xp 00000000 08:05 205532     /opt/sun-jdk/jre/bin/java
+08052000-08053000 rwxp 00009000 08:05 205532     /opt/sun-jdk/jre/bin/java
+09e11000-09e78000 rwxp 00000000 00:00 0          [heap]
+80197000-801f6000 r-xs 00492000 08:05 812617     /home/mehtap/ANDROİD/android-sdk-linux_x86/platforms/android-7/android.jar
+801f6000-801f7000 ---p 00000000 00:00 0 
+801f7000-80277000 rwxp 00000000 00:00 0 
+80277000-80278000 ---p 00000000 00:00 0 
+80278000-802f8000 rwxp 00000000 00:00 0 
+802f8000-802f9000 ---p 00000000 00:00 0 
+802f9000-80379000 rwxp 00000000 00:00 0 
+80379000-8037a000 ---p 00000000 00:00 0 
+8037a000-80402000 rwxp 00000000 00:00 0 
+80402000-8041a000 rwxp 00000000 00:00 0 
+8041a000-8042a000 rwxp 00000000 00:00 0 
+8042a000-80516000 rwxp 00000000 00:00 0 
+80516000-8051e000 rwxp 00000000 00:00 0 
+8051e000-80536000 rwxp 00000000 00:00 0 
+80536000-80546000 rwxp 00000000 00:00 0 
+80546000-80631000 rwxp 00000000 00:00 0 
+80631000-8063a000 rwxp 00000000 00:00 0 
+8063a000-806af000 rwxp 00000000 00:00 0 
+806af000-816b0000 rwxp 00000000 00:00 0 
+816b0000-846b0000 rwxp 00000000 00:00 0 
+846b0000-86620000 rwxp 00000000 00:00 0 
+86620000-a3d60000 rwxp 00000000 00:00 0 
+a3d60000-a4d10000 rwxp 00000000 00:00 0 
+a4d10000-b38b0000 rwxp 00000000 00:00 0 
+b38b5000-b38be000 rwxp 00000000 00:00 0 
+b38be000-b3975000 rwxp 00000000 00:00 0 
+b3975000-b3bb5000 rwxp 00000000 00:00 0 
+b3bb5000-b6975000 rwxp 00000000 00:00 0 
+b6975000-b697f000 r-xp 00000000 08:05 196325     /lib/libnss_files-2.9.so
+b697f000-b6980000 r-xp 00009000 08:05 196325     /lib/libnss_files-2.9.so
+b6980000-b6981000 rwxp 0000a000 08:05 196325     /lib/libnss_files-2.9.so
+b6981000-b698a000 r-xp 00000000 08:05 196326     /lib/libnss_nis-2.9.so
+b698a000-b698b000 r-xp 00008000 08:05 196326     /lib/libnss_nis-2.9.so
+b698b000-b698c000 rwxp 00009000 08:05 196326     /lib/libnss_nis-2.9.so
+b698c000-b6993000 r-xp 00000000 08:05 196323     /lib/libnss_compat-2.9.so
+b6993000-b6994000 r-xp 00006000 08:05 196323     /lib/libnss_compat-2.9.so
+b6994000-b6995000 rwxp 00007000 08:05 196323     /lib/libnss_compat-2.9.so
+b69a8000-b69b7000 r-xp 00000000 08:05 216643     /opt/sun-jdk/jre/lib/i386/libzip.so
+b69b7000-b69b9000 rwxp 0000e000 08:05 216643     /opt/sun-jdk/jre/lib/i386/libzip.so
+b69b9000-b69c1000 rwxs 00000000 08:05 2492       /tmp/hsperfdata_mehtap/21708
+b69c1000-b69c7000 r-xp 00000000 08:05 216670     /opt/sun-jdk/jre/lib/i386/native_threads/libhpi.so
+b69c7000-b69c8000 rwxp 00006000 08:05 216670     /opt/sun-jdk/jre/lib/i386/native_threads/libhpi.so
+b69c8000-b69eb000 r-xp 00000000 08:05 216572     /opt/sun-jdk/jre/lib/i386/libjava.so
+b69eb000-b69ed000 rwxp 00023000 08:05 216572     /opt/sun-jdk/jre/lib/i386/libjava.so
+b69ed000-b69f4000 r-xp 00000000 08:05 196329     /lib/librt-2.9.so
+b69f4000-b69f5000 r-xp 00006000 08:05 196329     /lib/librt-2.9.so
+b69f5000-b69f6000 rwxp 00007000 08:05 196329     /lib/librt-2.9.so
+b69f6000-b69f9000 ---p 00000000 00:00 0 
+b69f9000-b6a47000 rwxp 00000000 00:00 0 
+b6a47000-b6a6c000 r-xp 00000000 08:05 196321     /lib/libm-2.9.so
+b6a6c000-b6a6d000 r-xp 00024000 08:05 196321     /lib/libm-2.9.so
+b6a6d000-b6a6e000 rwxp 00025000 08:05 196321     /lib/libm-2.9.so
+b6a6e000-b71fb000 r-xp 00000000 08:05 216647     /opt/sun-jdk/jre/lib/i386/server/libjvm.so
+b71fb000-b724e000 rwxp 0078d000 08:05 216647     /opt/sun-jdk/jre/lib/i386/server/libjvm.so
+b724e000-b766d000 rwxp 00000000 00:00 0 
+b766d000-b77cd000 r-xp 00000000 08:05 196318     /lib/libc-2.9.so
+b77cd000-b77cf000 r-xp 0015f000 08:05 196318     /lib/libc-2.9.so
+b77cf000-b77d0000 rwxp 00161000 08:05 196318     /lib/libc-2.9.so
+b77d0000-b77d3000 rwxp 00000000 00:00 0 
+b77d3000-b77d5000 r-xp 00000000 08:05 196320     /lib/libdl-2.9.so
+b77d5000-b77d6000 r-xp 00001000 08:05 196320     /lib/libdl-2.9.so
+b77d6000-b77d7000 rwxp 00002000 08:05 196320     /lib/libdl-2.9.so
+b77d7000-b77d8000 rwxp 00000000 00:00 0 
+b77d8000-b77df000 r-xp 00000000 08:05 216614     /opt/sun-jdk/jre/lib/i386/jli/libjli.so
+b77df000-b77e1000 rwxp 00006000 08:05 216614     /opt/sun-jdk/jre/lib/i386/jli/libjli.so
+b77e1000-b77f6000 r-xp 00000000 08:05 196327     /lib/libpthread-2.9.so
+b77f6000-b77f7000 r-xp 00014000 08:05 196327     /lib/libpthread-2.9.so
+b77f7000-b77f8000 rwxp 00015000 08:05 196327     /lib/libpthread-2.9.so
+b77f8000-b77fa000 rwxp 00000000 00:00 0 
+b77ff000-b7800000 rwxp 00000000 00:00 0 
+b7800000-b7801000 r-xp 00000000 00:00 0 
+b7801000-b7816000 r-xp 00000000 08:05 196322     /lib/libnsl-2.9.so
+b7816000-b7817000 r-xp 00014000 08:05 196322     /lib/libnsl-2.9.so
+b7817000-b7818000 rwxp 00015000 08:05 196322     /lib/libnsl-2.9.so
+b7818000-b781a000 rwxp 00000000 00:00 0 
+b781a000-b7825000 r-xp 00000000 08:05 216629     /opt/sun-jdk/jre/lib/i386/libverify.so
+b7825000-b7826000 rwxp 0000b000 08:05 216629     /opt/sun-jdk/jre/lib/i386/libverify.so
+b7826000-b7827000 rwxp 00000000 00:00 0 
+b7827000-b7846000 r-xp 00000000 08:05 158451     /lib/ld-2.9.so
+b7846000-b7847000 r-xp 0001e000 08:05 158451     /lib/ld-2.9.so
+b7847000-b7848000 rwxp 0001f000 08:05 158451     /lib/ld-2.9.so
+bfbd9000-bfbee000 rwxp 00000000 00:00 0          [stack]
+ffffe000-fffff000 r-xp 00000000 00:00 0          [vdso]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 -Xbootclasspath:/home/mehtap/ANDROİD/android-sdk-linux_x86/platforms/android-7/android.jar 
+java_command: com.example.loadimage
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/opt/sun-jdk
+PATH=/usr/qt/4/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/bin:/opt/sun-jre/bin:/opt/sun-jdk/bin:/usr/kde/4/bin
+LD_LIBRARY_PATH=/opt/sun-jdk/jre/lib/i386/server:/opt/sun-jdk/jre/lib/i386:/opt/sun-jdk/jre/../lib/i386:/opt/sun-jdk/jre/lib/i386/client:/opt/sun-jdk/jre/lib/i386:/usr/lib/xulrunner-1.9.2:/usr/lib/xulrunner-1.9.2
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x708f80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x708f80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5c4100], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x5c4100], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x5c4100], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5c4100], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5c70e0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGINT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGQUIT: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Linux
+uname:Linux 2.6.31.14-132 #1 SMP Thu Dec 16 15:55:32 EET 2010 i686
+libc:glibc 2.9 NPTL 2.9 
+rlimit: STACK 8192k, CORE 0k, NPROC 24080, NOFILE 1024, AS infinity
+load average:0.08 0.16 0.19
+
+/proc/meminfo:
+MemTotal:        3087864 kB
+MemFree:         1755052 kB
+Buffers:           58920 kB
+Cached:           650500 kB
+SwapCached:            0 kB
+Active:           877468 kB
+Inactive:         378740 kB
+Active(anon):     553276 kB
+Inactive(anon):       36 kB
+Active(file):     324192 kB
+Inactive(file):   378704 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:       2230536 kB
+HighFree:        1014940 kB
+LowTotal:         857328 kB
+LowFree:          740112 kB
+SwapTotal:        307192 kB
+SwapFree:         307192 kB
+Dirty:               272 kB
+Writeback:             0 kB
+AnonPages:        546608 kB
+Mapped:           133300 kB
+Slab:              43020 kB
+SReclaimable:      25848 kB
+SUnreclaim:        17172 kB
+PageTables:         4868 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1851124 kB
+Committed_AS:    1561380 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       49396 kB
+VmallocChunk:      37364 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       4096 kB
+DirectMap4k:       36856 kB
+DirectMap4M:      868352 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 3087864k(1755052k free), swap 307192k(307192k free)
+
+vm_info: Java HotSpot(TM) Server VM (19.1-b02) for linux-x86 JRE (1.6.0_24-b07), built on Feb  2 2011 16:51:52 by "java_re" with gcc 3.2.1-7a (J2SE release)
+
+time: Fri Apr 15 14:36:16 2011
+elapsed time: 0 seconds
+

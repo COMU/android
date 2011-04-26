@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, SingUp!</string>
-    <string name="app_name">SignUp</string>
+    <string name="app_name">Ahbap</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signUp">Sign Up!</string>
+    <string name="Name">Name</string>
+    <string name="lastName">Last Name</string>
 </resources>

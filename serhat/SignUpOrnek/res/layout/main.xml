@@ -2,103 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF"
-    android:padding="10dp"
+    android:layout_weight="1"
+    android:padding="20dip"
     >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="Enter Your Informations"
-    android:background="#0066CC"
-    />
-    <EditText
-    	android:id="@+id/nameBox"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:hint="Enter Your Name"
-    	android:maxLength="50"/>
-     <EditText
-    	android:id="@+id/lastNameBox"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:hint="Enter Your Last Name"
-    	android:maxLength="50"/>
-    <LinearLayout
-    	android:orientation="horizontal"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-    	<Button
-    		android:id="@+id/setBirthDate"
-    		android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:text="Set BirthDate"/>
-    	<EditText
-    	android:id="@+id/dateBox"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:hint="Date"
-    	android:longClickable="false"/>
-    </LinearLayout>
-     <EditText
-    	android:id="@+id/emailBox"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:hint="Enter Email Here"
-    	android:maxLength="50"/>
-     <EditText
-    	android:id="@+id/passwordBox"
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:hint="Enter Your Password Here"
-    	android:maxLength="50"/>
-     <TextView 
-     	android:text="Latitude"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:background="#0066CC"
-     />
-     <TextView
-     	android:id="@+id/latitude"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:text=" "/>
-    <TextView 
-     	android:text="Longitude"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:background="#0066CC"
-     />
-     <TextView
-     	android:id="@+id/longitude"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:text=" "/>
-    <TextView 
-     	android:text="Country"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:background="#0066CC"
-     />
-     <TextView
-     	android:id="@+id/country"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:text=" " 	/>
-     <TextView 
-     	android:text="City"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:background="#0066CC"
-     />
-     <TextView
-     	android:id="@+id/city"
-     	android:layout_width="fill_parent"
-     	android:layout_height="wrap_content"
-     	android:text=" "/>
-     <Button
-    		android:id="@+id/save"
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text="Finish"/>
+	<TextView
+		android:text="@string/email"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
+	<EditText
+		android:id="@+id/email"
+		android:layout_height="wrap_content"
+		android:hint="@string/email"
+		android:layout_width="fill_parent"
+		android:maxLength="50"
+		android:background="@android:drawable/editbox_background"
+		android:minWidth="240dip"/>
+	<TextView
+		android:text="@string/Name"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
+	<EditText
+		android:id="@+id/name"
+		android:layout_height="wrap_content"
+		android:hint="@string/Name"
+		android:layout_width="fill_parent"
+		android:background="@android:drawable/editbox_background"
+		android:maxLength="50"/>
+	<TextView
+		android:text="@string/lastName"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"/>
+	<EditText
+		android:id="@+id/email"
+		android:hint="@string/lastName"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:background="@android:drawable/editbox_background"
+		android:maxLength="50"/>
+	</LinearLayout>
+	<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#c6c3c6">
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/signUp"/>
+    </FrameLayout>
 </LinearLayout>

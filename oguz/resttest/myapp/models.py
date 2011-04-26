@@ -29,7 +29,7 @@ class KullaniciDetaylari(models.Model):
     ilgi_alanlari = models.ForeignKey(IlgiAlanlari)
 
 class Kullanici(models.Model):
-    dogrulama_id=models.CharField(max_length=100)
+    dogrulama_id = models.CharField(max_length=100)
     ad = models.CharField(max_length=100)
     soyad = models.CharField(max_length=100)
     dogum_tarihi = models.DateTimeField()
@@ -37,10 +37,4 @@ class Kullanici(models.Model):
     parola = models.CharField(max_length=100)
     konum = models.ForeignKey(Konum)
     kullanici_detaylari = models.ForeignKey(KullaniciDetaylari)
-    durum = models.BooleanField()
-class Kayit(models.Model):
-    ad = models.CharField(max_length=100)
-    soyad = models.CharField(max_length=100)
-    email = models.EmailField()
-    dogrulama_id = models.CharField(max_length=100)
-    kayit_tarihi = models.DateTimeField()
+    durum = models.BooleanField(False)

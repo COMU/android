@@ -3,5 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="/home/serhat/android/ahmetcan/activation.jar"/>
+	<classpathentry kind="lib" path="/home/serhat/android/ahmetcan/additionnal.jar"/>
+	<classpathentry kind="lib" path="/home/serhat/android/ahmetcan/mail.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

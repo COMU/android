@@ -3,6 +3,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
 <LinearLayout 
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -21,7 +25,8 @@
 		android:layout_width="fill_parent"
 		android:maxLength="50"
 		android:background="@android:drawable/editbox_background"
-		android:minWidth="240dip"/>
+		android:minWidth="240dip"
+		android:maxWidth="240dip"/>
 	<TextView
 		android:text="@string/Name"
 		android:layout_width="fill_parent"
@@ -32,19 +37,24 @@
 		android:hint="@string/Name"
 		android:layout_width="fill_parent"
 		android:background="@android:drawable/editbox_background"
-		android:maxLength="50"/>
+		android:maxLength="50"
+		android:minWidth="240dip"
+		android:maxWidth="240dip"/>
 	<TextView
 		android:text="@string/lastName"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"/>
 	<EditText
-		android:id="@+id/email"
+		android:id="@+id/lastName"
 		android:hint="@string/lastName"
 		android:layout_height="wrap_content"
 		android:layout_width="fill_parent"
 		android:background="@android:drawable/editbox_background"
-		android:maxLength="50"/>
+		android:maxLength="50"
+		android:minWidth="240dip"
+		android:maxWidth="240dip"/>
 	</LinearLayout>
+ </ScrollView>
 	<FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

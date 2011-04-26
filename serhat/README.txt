@@ -1,1 +1,0 @@
-Serhat'ın çalışma dizini.

@@ -7,4 +7,7 @@
     <string name="signUp">Sign Up!</string>
     <string name="Name">Name</string>
     <string name="lastName">Last Name</string>
+    <string name="tryAgain">Check Your Email!</string>
+    <string name="emptyField">Check Fields !</string>
+    <string name="activate">Ahbap Activation</string>
 </resources>

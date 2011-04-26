@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+<TextView
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="@string/hello"
+  />
+  <Button
+   android:id="@+id/loadimage"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:text="Load Image"
+   />
+   <ImageView 
+     android:id="@+id/test2"
+     android:layout_height="fill_parent"
+     android:layout_width="wrap_content"
+     ></ImageView>
+<Button
+  android:id="@+id/buttonpick"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:text="- PICK a file -"
+  />
+<TextView
+  android:id="@+id/textfile"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+<TextView
+  android:id="@+id/textfolder"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+<TextView
+  android:id="@+id/textfilename"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+<TextView
+  android:id="@+id/textfilename_withoutext"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+<TextView
+  android:id="@+id/textfilename_ext"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  />
+</LinearLayout>

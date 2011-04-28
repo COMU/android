@@ -10,7 +10,9 @@ from konumHandler import KonumHandler
 from kullaniciHandler import KullaniciHandler
 from egitimDurumHandler import EgitimDurumuHandler
 from emailHandler import EmailHandler
+from aktiflestirHandler import Aktiflestir
 
+aktiflestir = Resource(Aktiflestir)
 email_handler = Resource(EmailHandler)
 egitim_handler = Resource(EgitimDurumuHandler)
 kullanici_handler = Resource(KullaniciHandler)
@@ -19,7 +21,7 @@ sehir_handler = Resource(SehirHandler)
 ulke_handler = Resource(UlkeHandler)
 konum_handler = Resource(KonumHandler)
 urlpatterns = patterns('',
-    url(r'^email/(?P<emailadress>[^/]+)',email_handler),
+     url(r'^email/(?P<emailadress>[^/]+)',email_handler),
      url(r'^egitim/(?P<egitim_id>[^/]+)', egitim_handler),
      url(r'^egitim/', egitim_handler),
      url(r'^kullanici/(?P<kullanici_id>[^/]+)', kullanici_handler),
@@ -31,5 +33,6 @@ urlpatterns = patterns('',
      url(r'^sehir/(?P<sehir_id>[^/]+)', sehir_handler),
      url(r'^sehir/', sehir_handler),
      url(r'^meslek/(?P<meslek_id>[^/]+)', meslek_handler),
-     url(r'^meslekler/', meslek_handler)
+     url(r'^meslekler/', meslek_handler),
+     url(r'^aktiflestir/(?P<dogrulama>[^/]+)', aktiflestir)
 )

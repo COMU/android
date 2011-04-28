@@ -23,5 +23,5 @@ class KullaniciHandler(BaseHandler):
         kullanici.save()
         return rc.ALL_OK
     def create(self,request):
-        Kullanici.objects.create(ad=request.POST.get("ad"),soyad=request.POST.get("soyad"),email=request.POST.get("email"))
+        Kullanici.objects.create(ad=request.POST.get("ad"),soyad=request.POST.get("soyad"),email=request.POST.get("email"),parola = request.POST.get("parola"), dogrulama_id = request.POST.get("dogrulama_id"))
         return rc.CREATED

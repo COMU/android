@@ -22,10 +22,12 @@ public final class R {
         public static final int ok_button=0x7f050006;
         public static final int singButton=0x7f050002;
         public static final int userName=0x7f050000;
+        public static final int webview=0x7f050007;
     }
     public static final class layout {
         public static final int login=0x7f030000;
         public static final int main=0x7f030001;
+        public static final int web=0x7f030002;
     }
     public static final class string {
         public static final int Name=0x7f040005;
@@ -36,6 +38,7 @@ public final class R {
         public static final int lastName=0x7f040006;
         public static final int login=0x7f040003;
         public static final int password=0x7f040002;
+        public static final int returnApp=0x7f04000a;
         public static final int signUp=0x7f040004;
         public static final int tryAgain=0x7f040007;
     }

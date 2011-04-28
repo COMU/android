@@ -17,6 +17,9 @@
         <activity
         	android:name=".SingUp"
         	android:theme="@android:style/Theme.Dialog"></activity>
+        <activity
+        	android:name=".Activate"
+        	android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />

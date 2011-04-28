@@ -3,13 +3,13 @@ package com.example;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class SingUp extends Activity {
 	/** Called when the activity is first created. */
@@ -48,18 +48,23 @@ public class SingUp extends Activity {
 						user.setAdi(ad.getText().toString());
 						user.setSoyad(soyad.getText().toString());
 						user.setEmail(email.getText().toString());
+						user.setKey(Generate.key(30));
+						user.setParola(Generate.key(6));
 						if (service.addUser(user)) {
 							Mail mailSender= new Mail("ahmetcan196@gmail.com","mesela12");
 							String[] toArr = { mail };
-							user.setKey(Generate.key(30));
-							user.setParola(Generate.key(6));
 							mailSender.setTo(toArr);
-							mailSender.setSubject("Parola = " + user.getParola() + "\n" +
+							mailSender.setSubject("Ahbap Activation");
+							mailSender.setBody("Parola = " + user.getParola() + "\n" +
 									"Aktivasyon Linki = "+"http://10.0.2.2:8000/api/aktiflestir/" + 
 									 user.getKey());
-							mailSender.setBody("Neler Oluyor Orada !");
 							try {
-								mailSender.send();
+								if(mailSender.send()){
+									Intent intent =new Intent(SingUp.this,Activate.class);
+									intent.putExtra("mail", "http://www." + user.getEmail().split("@")[1]);
+									startActivity(intent);
+									finish();
+								}
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();

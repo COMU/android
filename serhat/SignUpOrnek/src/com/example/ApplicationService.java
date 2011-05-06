@@ -13,8 +13,8 @@ public class ApplicationService {
 	private WebService service;
 	private Context context;
 	public ApplicationService(Context context){
-		service=new WebService();
 		this.context=context;
+		service=new WebService(this.context);
 		
 	}
 	public boolean emailControl(String email){
@@ -32,5 +32,12 @@ public class ApplicationService {
 			return true; 
 		}
 		return false;
+	}
+	public boolean login(String email,String parola){
+		String sonuc = service.getUser(email, parola);
+		if(sonuc.equals("-1")){
+			return false;
+		}
+		return true;
 	}
 }

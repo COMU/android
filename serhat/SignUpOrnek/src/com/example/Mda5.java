@@ -1,37 +1,36 @@
 package com.example;
 
-import java.security.*;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class Mda5 {
 	private String str;
-	
-	public Mda5(String str){
-		this.str=str;
+
+	public Mda5(String str) {
+		this.str = str;
 	}
-	public Mda5(){
-		
+
+	public Mda5() {
+
 	}
-	public String returnMda5(){
-		byte[] defaultBytes = str.getBytes();
+
+	public static String getMD5(String input) {
 		try {
-			MessageDigest algorithm = MessageDigest.getInstance("MD5");
-			algorithm.reset();
-			algorithm.update(defaultBytes);
-			byte[] messageDigest = algorithm.digest();
-			StringBuffer hexString = new StringBuffer();
-			
-			for(int i=0;i<messageDigest.length;i++){
-				hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
-			}
-			String foo = messageDigest.toString();
-			System.out.println("sessionid "+str+" md5 version is "+hexString.toString());
-			str=hexString+"";
-		}catch(NoSuchAlgorithmException nsae){
-		            
-		}
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(input.getBytes());
+            BigInteger number = new BigInteger(1, messageDigest);
+            String hashtext = number.toString(16);
+            // Now we need to zero pad it if you actually want the full 32 chars.
+            while (hashtext.length() < 32) {
+                hashtext = "0" + hashtext;
+            }
+            return hashtext;
+        }
+        catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+        
+	}
 
-
-		
-		return str;
-	}	
 }

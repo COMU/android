@@ -1,3 +1,5 @@
+#ifndef MODELS.PY
+#define MODELS.PY
 from django.db import models
 
 # Create your models here.
@@ -29,12 +31,12 @@ class KullaniciDetaylari(models.Model):
     ilgi_alanlari = models.ForeignKey(IlgiAlanlari)
 
 class Kullanici(models.Model):
-    dogrulama_id = models.CharField(max_length=100)
+    dogrulama_id = models.CharField(max_length=30)
     ad = models.CharField(max_length=100)
     soyad = models.CharField(max_length=100)
-    dogum_tarihi = models.DateTimeField()
+    dogum_tarihi = models.DateTimeField(null = True)
     email = models.EmailField()
     parola = models.CharField(max_length=100)
-    konum = models.ForeignKey(Konum)
-    kullanici_detaylari = models.ForeignKey(KullaniciDetaylari)
-    durum = models.BooleanField(False)
+    konum = models.ForeignKey(Konum,null = True)
+    kullanici_detaylari = models.ForeignKey(KullaniciDetaylari,null = True)
+    durum = models.NullBooleanField(False,null = True, blank = True)

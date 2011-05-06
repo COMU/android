@@ -34,5 +34,5 @@ urlpatterns = patterns('',
      url(r'^sehir/', sehir_handler),
      url(r'^meslek/(?P<meslek_id>[^/]+)', meslek_handler),
      url(r'^meslekler/', meslek_handler),
-     url(r'^aktiflestir/(?P<dogrulama>[^/]+)', aktiflestir)
+     url(r'^aktiflestir/', aktiflestir)
 )

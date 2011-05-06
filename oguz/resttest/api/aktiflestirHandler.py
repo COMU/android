@@ -14,7 +14,11 @@ class Aktiflestir(BaseHandler):
             decoder = DecodeBase64()
             params = request.GET.get('param')
             liste = decoder.returnParams(params)
-            kullanici = Kullanici.objects.get(email = liste[0])
+            print liste
+            try:
+                kullanici = Kullanici.objects.get(email = liste[0])
+            except Kullanici.DoesNotExist:
+                return rc.NOT_FOUND
             if kullanici.dogrulama_id == liste[1]:
                 kullanici.durum = True
                 kullanici.save()

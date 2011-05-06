@@ -39,4 +39,4 @@ class Kullanici(models.Model):
     parola = models.CharField(max_length=100)
     konum = models.ForeignKey(Konum,null = True)
     kullanici_detaylari = models.ForeignKey(KullaniciDetaylari,null = True)
-    durum = models.NullBooleanField(False,null = True, blank = True)
+    durum = models.NullBooleanField(False)

@@ -18,7 +18,8 @@ class KullaniciHandler(BaseHandler):
         try:
             kullanici = Kullanici.objects.get(email = liste[0],
                     parola = liste[1],
-                    dogrulama_id = liste[2])
+                    dogrulama_id = liste[2]
+                    durum = True)
             return kullanici
         except Kullanici.DoesNotExist:
             return -1

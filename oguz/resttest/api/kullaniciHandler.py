@@ -38,18 +38,15 @@ class KullaniciHandler(BaseHandler):
             decoder = DecodeBase64()
             params = decoder.returnParams(request.POST.get("params"))
             kullanici, created = Kullanici.objects.get_or_create(ad = params[0], soyad = params[1], email = params[2])
-        #if not created:
-        #    return rc.CREATED
-        #else:
-            kullanici.parola = params[3]
-            kullanici.dogrulama_id = params[4]
-            print "geldi"
-            kullanici.resim = request.POST.get("resim")
-            print "gecti"
-            email = Email()
-            hashMd5 = Crypt()
-            #email.gonder("Ahbap Onay Kodu", kullanici.parola, kullanici.dogrulama_id, kullanici.email )
-            kullanici.parola = hashMd5.returnHash(kullanici.parola)
-            kullanici.save()
-            return rc.CREATED
+            if not created:
+                return rc.CREATED
+            else:
+                kullanici.parola = params[3]
+                kullanici.dogrulama_id = params[4]
+                email = Email()
+                hashMd5 = Crypt()
+                email.gonder("Ahbap Onay Kodu", kullanici.parola, kullanici.dogrulama_id, kullanici.email )
+                kullanici.parola = hashMd5.returnHash(kullanici.parola)
+                kullanici.save()
+                return rc.CREATED
         

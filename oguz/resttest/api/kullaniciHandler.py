@@ -25,14 +25,19 @@ class KullaniciHandler(BaseHandler):
             return kullanici
         except Kullanici.DoesNotExist:
             return -1
-    def uptade(self,request,kullanici_id):
-        kullanici = Kullanici.objects.get(id = kullanici_id)
-        kullanici.adi = request.PUT.get("ad")
-        kullanici.soyad = request.PUT.get("soyad")
-        kullanici.dogum_tarihi = request.PUT.get("dogum_tarihi")
-        kullanici.email = request.PUT.get("email")
-        kullanici.parola = request.PUT.get("parola")
+    def update(self,request):
+        decoder = DecodeBase64()
+        liste  = decoder.returnParams(request.PUT.get('params'))
+
+        print liste
+        kullanici = Kullanici.objects.get(dogrulama_id = liste[0])
+        kullanici.ad = liste[1]
+        kullanici.soyad = liste[2]
+        kullanici.dogum_tarihi = liste[4]
+        kullanici.email = liste[3]
+        # kullanici.parola = request.PUT.get("parola")
         kullanici.save()
+        print "kaydetti."
         return rc.ALL_OK
     def create(self,request):
             decoder = DecodeBase64()

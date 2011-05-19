@@ -29,7 +29,8 @@ class KullaniciDetaylari(models.Model):
     meslek = models.ForeignKey(Meslek)
     egitim_durumu = models.ForeignKey(EgitimDurumu)
     ilgi_alanlari = models.ForeignKey(IlgiAlanlari)
-
+class KullaniciResmi(models.Model):
+    kaynak = models.ImageField(upload_to = 'images')
 class Kullanici(models.Model):
     dogrulama_id = models.CharField(max_length=30)
     ad = models.CharField(max_length=100)
@@ -40,3 +41,4 @@ class Kullanici(models.Model):
     konum = models.ForeignKey(Konum,null = True)
     kullanici_detaylari = models.ForeignKey(KullaniciDetaylari,null = True)
     durum = models.NullBooleanField(False)
+    resim = models.OneToOneField(KullaniciResmi, null = True)

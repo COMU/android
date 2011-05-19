@@ -3,17 +3,25 @@
 
 from piston.handler import BaseHandler
 from piston.utils import rc,throttle
-from myapp.models import Ulke
-
+from myapp.models import *
+from api.decodebase64 import *
 class UlkeHandler(BaseHandler):
     allowed_methods = ("GET","POST","PUT")
 
-    def read(self,request,ulke_id):
-        base=Ulke
-        if(ulke_id):
-            return Ulke.objects.get(id=ulke_id)
-        else:
-            return Ulke.objects.all()
+    def read(self,request):
+        decoder = DecodeBase64()
+        liste = []
+
+        if request.GET.has_key("param"):
+            liste = decoder.returnParams(request.GET.get('param'))
+        try:
+            kullanici = Kullanici.objects.get(email = liste[0],
+                                            parola = liste[1],
+                                            dogrulama_id = liste[2],
+                                            durum = True)
+            return kullanici.konum.ulke
+        except Kullanici.DoesNotExist:
+            return -1
     def uptade(self,request,ulke_id):
         ulke=Ulke.objects.get(id=ulke_id)
         ulke.adi=request.PUT.get("ulke_adi")

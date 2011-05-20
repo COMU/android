@@ -23,21 +23,32 @@ class KonumHandler(BaseHandler):
         except Kullanici.DoesNotExist:
             return -1
 
-    def uptade(self,request,konum_id):
+    def update(self,request):
         decoder = DecodeBase64()
+        print "konum update"
         liste = decoder.returnParams(request.PUT.get('params'))
         print liste
+        
         kullanici = Kullanici.objects.get(dogrulama_id = liste[0], email = liste[1],
                 parola = liste[2])
-        konum=Kullanici.konum
+        konum=kullanici.konum
         konum.enlem = liste[3]
         konum.boylam = liste[4]
         konum.sehir.adi = liste[5]
+        konum.sehir.save()
         konum.ulke.adi = liste[6]
+        konum.ulke.save()
+        konum.save()
         return rc.ALL_OK
     def create(self,request):
-        konum=Konum.objects.create(enlem=request.POST.get("enlem"),
-                boylam=request.POST.get("boylam"), 
-                sehir=Sehir.objects.create(adi=request.POST.get("sehir_adi")),
-                ulke=Ulke.objects.create(adi=request.POST.get("ulke_adi")) )
+        decoder = DecodeBase64()
+        liste = decoder.returnParams(request.POST.get('params'))
+        kullanici = Kullanici.objects.get(dogrulama_id = liste[0], email = liste[1],
+                                            parola = liste[2])
+        konum=Konum.objects.create(enlem = liste[3],
+                boylam = liste[4], 
+                sehir = Sehir.objects.create(adi = liste[5]),
+                ulke=Ulke.objects.create(adi=liste[6]) )
+        kullanici.konum = konum
+        kullanici.save()
         return rc.CREATED

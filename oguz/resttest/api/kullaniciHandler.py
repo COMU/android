@@ -35,7 +35,7 @@ class KullaniciHandler(BaseHandler):
         kullanici.soyad = liste[2]
         kullanici.dogum_tarihi = liste[4]
         kullanici.email = liste[3]
-        # kullanici.parola = request.PUT.get("parola")
+        kullanici.parola = liste[5]
         kullanici.save()
         print "kaydetti."
         return rc.ALL_OK

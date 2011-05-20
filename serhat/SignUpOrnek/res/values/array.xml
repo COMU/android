@@ -1,0 +1,54 @@
+<resources>
+
+    <string-array name="education">
+        <item>Yok</item>
+        <item>İlkokul</item>
+        <item>Ortaokul</item>
+        <item>Lise</item>
+        <item>Universite</item>
+    </string-array>
+      <string-array name="gender">
+        <item>Bay</item>
+        <item>Bayan</item>
+    </string-array>
+    
+       <string-array name="city">
+        <item>Adana</item>
+        <item>Ankara</item>
+        <item>Aydın</item>
+        <item>Balikesir</item>
+        <item>Canakkale</item>
+        <item>Denizli</item>
+        <item>Edirne</item>
+        <item>Erzurum</item>
+        <item>Eskisehir</item>
+        <item>Mersin</item>
+        <item>Istanbul</item>
+        <item>Izmir</item>
+        <item>Kayseri</item>
+        <item>Manisa</item>
+        <item>Mugla</item>
+        <item>Sakarya</item>
+        <item>Tekirdag</item>
+        <item>Osmaniye</item>
+        <item>Duzce</item>
+    </string-array>
+  
+    
+       <string-array name="country">
+        <item>Almanya</item>
+        <item>Avusturalya</item>
+        <item>Azerbaycan</item>
+        <item>Brezilya</item>
+        <item>Bulgaristan</item>
+        <item>Cek Cumhuriyeti</item>
+        <item>Danimarka</item>
+        <item>Hollanda</item>
+        <item>Italya</item>
+        <item>Japonya</item>
+        <item>Misir</item>
+        <item>Rusya</item>
+        <item>Turkiye</item>
+        <item>Yeni Zelanda</item>
+    </string-array>
+</resources>

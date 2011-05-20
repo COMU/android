@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/EducationFind"
+        android:layout_centerHorizontal="true"
+    />
+</RelativeLayout>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+    <Spinner 
+        android:id="@+id/edu_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+
+    />
+</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/GenderFind"
+    />
+</RelativeLayout>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+    <Spinner 
+        android:id="@+id/gender_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"/>
+</RelativeLayout>
+
+
+
+<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/CountryFind"
+    />
+</RelativeLayout>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+    <Spinner 
+        android:id="@+id/country_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"/>
+</RelativeLayout>
+
+
+
+
+<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="@string/CityFind"
+    />
+</RelativeLayout>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+    <Spinner 
+        android:id="@+id/city_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"/>
+</RelativeLayout>
+
+</LinearLayout>

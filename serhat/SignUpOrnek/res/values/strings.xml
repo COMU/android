@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Ahbap</string>
     <string name="email">Email</string>
-    <string name="password">Parola</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="signUp">Sign Up!</string>
     <string name="Name">Ad</string>
@@ -23,6 +23,10 @@
 	<string name="sehir">Sehir</string>
 	<string name="ulke">Ulke</string>
 	<string name="konumBilgileri">Konum Bilgileri</string>
-	<string name="kaydet">Kaydet</string>
 	<string name="dogumTarihi">Dogum Tarihi</string>
+	<string name="kaydet">Kaydet</string>
+	<string name="EducationFind">Egitim Özellikleri</string>
+	<string name="GenderFind">Cinsiyet Özellikleri</string>
+	<string name="CountryFind">Ulke Seciniz</string>
+	<string name="CityFind">Sehir Seciniz</string>
 </resources>

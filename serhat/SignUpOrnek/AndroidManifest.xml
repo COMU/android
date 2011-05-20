@@ -14,6 +14,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Ahbap"
+          android:theme="@android:style/Theme.NoTitleBar"></activity>
+            <activity android:name=".Arama" 
+          android:theme="@android:style/Theme.NoTitleBar"></activity>
+            <activity android:name=".Mesaj" 
+          android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity
         	android:name=".SingUp"
         	android:theme="@android:style/Theme.Dialog"></activity>
@@ -22,6 +28,9 @@
         	android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity
         	android:name=".Profil"
+        	android:theme="@android:style/Theme.NoTitleBar"></activity>
+        	 <activity
+        	android:name=".A"
         	android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

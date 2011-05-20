@@ -23,8 +23,8 @@ public class Activate extends Activity {
 		returnBack = (Button) findViewById(R.id.button);
 		returnBack.setOnClickListener(new OnClickListener() {
 			
-			@Override
-			public void onClick(View v) {
+	
+			public void onClick(View v){
 				// TODO Auto-generated method stub
 				finish();
 			}

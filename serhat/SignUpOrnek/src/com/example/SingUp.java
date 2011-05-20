@@ -40,7 +40,7 @@ public class SingUp extends Activity {
 		
 		singUp.setOnClickListener(new OnClickListener() {
 
-			@Override
+			
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				service = new ApplicationService(getApplicationContext());
@@ -90,7 +90,7 @@ public class SingUp extends Activity {
 		alert.setMessage(message);
 		alert.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
 
-			@Override
+			
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
 

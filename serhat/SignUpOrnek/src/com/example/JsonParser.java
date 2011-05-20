@@ -17,7 +17,6 @@ public class JsonParser {
 			kullanici.setAdi(kullaniciJson.getString("ad"));
 			kullanici.setSoyad(kullaniciJson.getString("soyad"));
 			kullanici.setEmail(kullaniciJson.getString("email"));
-			kullanici.setDogumTarihi(kullaniciJson.getString("dogum_tarihi"));
 			kullanici.setResimId(kullaniciJson.getString("resim_id"));
 			kullanici.setDetayId(kullaniciJson.getString("kullanici_detaylari_id"));
 			kullanici.setKonumId(kullaniciJson.getString("konum_id"));

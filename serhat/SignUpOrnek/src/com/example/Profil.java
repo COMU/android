@@ -1,5 +1,6 @@
 package com.example;
 
+import java.io.FileNotFoundException;
 import java.util.Calendar;
 
 import android.app.Activity;
@@ -8,6 +9,8 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,8 +19,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Profil extends Activity {
 	private Kullanici kullanici;
@@ -44,6 +47,7 @@ public class Profil extends Activity {
 	private myAddress address;
 	private Coordinates coordinate;
 	private Button parolaDegistir;
+	private ImageView profil_photo;
 	private static final int DATE_DIALOG_ID = 0;
 	private int mDay;
 	private int mMonth;
@@ -74,13 +78,13 @@ public class Profil extends Activity {
 		parolaDegistir.setOnClickListener(parolaListener);
 		konumGuncelle = (Button) findViewById(R.id.konum);
 		konumGuncelle.setOnClickListener(konumListener);
-
+		profil_photo=(ImageView)findViewById(R.id.profil_image);
 		setUserText();
 		setLocationText();
 		kaydet = (Button) findViewById(R.id.kaydet);
 		kaydet.setOnClickListener(new OnClickListener() {
 
-			@Override
+		
 			public void onClick(View v) {
 				service.userUptade(kullanici, Mda5.getMD5(extras.getString("parola")));
 				if(!kullanici.getKonumId().equals("null"))
@@ -91,7 +95,7 @@ public class Profil extends Activity {
 		});
 		Button button = (Button) findViewById(R.id.degistir0);
 		button.setOnClickListener(new OnClickListener() {
-			@Override
+	
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(
@@ -112,7 +116,7 @@ public class Profil extends Activity {
 
 		tarihButton.setOnClickListener(new OnClickListener() {
 
-			@Override
+			
 			public void onClick(View v) {
 				showDialog(DATE_DIALOG_ID);
 			}
@@ -188,8 +192,18 @@ public class Profil extends Activity {
 
 		if (resultCode == RESULT_OK) {
 			Uri targetUri = data.getData();
-			Toast.makeText(getApplicationContext(), targetUri.toString(),
-					Toast.LENGTH_LONG).show();
+			Bitmap bitmap;
+		    try {
+		     bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
+		     Bitmap bMapScaled = Bitmap.createScaledBitmap(bitmap, 50,50, true);
+
+		      profil_photo.setImageBitmap(bMapScaled);
+		
+		    } catch (FileNotFoundException e) {
+		     // TODO Auto-generated catch block
+		     e.printStackTrace();
+		    }
+
 		}
 	}
 
@@ -237,14 +251,13 @@ public class Profil extends Activity {
 	}
 	private OnClickListener parolaListener = new OnClickListener() {
 		
-		@Override
+	
 		public void onClick(View v) {
 			inputDialog(4);
 		}
 	};
 	private OnClickListener adListener = new OnClickListener() {
 
-		@Override
 		public void onClick(View v) {
 			inputDialog(1);
 
@@ -252,7 +265,6 @@ public class Profil extends Activity {
 	};
 	private OnClickListener soyAdListener = new OnClickListener() {
 
-		@Override
 		public void onClick(View v) {
 			inputDialog(2);
 
@@ -260,7 +272,7 @@ public class Profil extends Activity {
 	};
 	private OnClickListener emailListener = new OnClickListener() {
 
-		@Override
+		
 		public void onClick(View v) {
 			inputDialog(3);
 
@@ -268,7 +280,7 @@ public class Profil extends Activity {
 	};
 	private OnClickListener konumListener = new OnClickListener() {
 
-		@Override
+		
 		public void onClick(View v) {
 			locationManager = new MyLocationManager();
 			locationManager.getLocation(getApplicationContext(), result);

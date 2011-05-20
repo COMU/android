@@ -31,13 +31,13 @@ public class Login extends Activity{
 	}
 	private OnClickListener loginListener = new OnClickListener() {
 		
-		@Override
+		
 		public void onClick(View v) {
 			String mail = email.getText().toString();
 			String paro = parola.getText().toString();
 			if(!mail.equals("") && !paro.equals("")){
 				if(service.login(mail,Mda5.getMD5(paro))){
-					Intent intent =new Intent(Login.this, Profil.class);
+					Intent intent =new Intent(Login.this, Ahbap.class);
 					intent.putExtra("email", mail);
 					intent.putExtra("parola", Mda5.getMD5(paro));
 					startActivity(intent);
@@ -51,7 +51,7 @@ public class Login extends Activity{
 	};
 	private OnClickListener signUpListener = new OnClickListener() {
 		
-		@Override
+		
 		public void onClick(View v) {
 			Intent intent=new Intent(Login.this,SingUp.class);
 			startActivity(intent);
@@ -63,10 +63,9 @@ public class Login extends Activity{
 		alert.setMessage(message);
 		alert.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
 
-			@Override
+			
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
-
 			}
 		});
 		alert.show();

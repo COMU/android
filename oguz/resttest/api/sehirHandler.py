@@ -19,7 +19,10 @@ class SehirHandler(BaseHandler):
                                             parola = liste[1],
                                             dogrulama_id = liste[2],
                                             durum = True)
-            return kullanici.konum.sehir
+            if len(liste)==3:
+                return kullanici.konum.sehir
+            else:
+                return Sehir.objects.filter(ulke=Ulke.objects.get(adi=liste[3]))
         except Kullanici.DoesNotExist:
             return -1
 

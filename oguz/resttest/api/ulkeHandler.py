@@ -14,12 +14,16 @@ class UlkeHandler(BaseHandler):
 
         if request.GET.has_key("param"):
             liste = decoder.returnParams(request.GET.get('param'))
+        print liste
         try:
             kullanici = Kullanici.objects.get(email = liste[0],
                                             parola = liste[1],
                                             dogrulama_id = liste[2],
                                             durum = True)
-            return kullanici.konum.ulke
+            if len(liste)!=3:
+                return kullanici.konum.ulke
+            else:
+                return Ulke.objects.all()
         except Kullanici.DoesNotExist:
             return -1
     def uptade(self,request,ulke_id):

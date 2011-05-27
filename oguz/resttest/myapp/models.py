@@ -4,12 +4,11 @@ from django.db import models
 
 # Create your models here.
 
-class Sehir(models.Model):
-    adi = models.CharField(max_length=50)
-
 class Ulke(models.Model):
     adi = models.CharField(max_length=50)
-
+class Sehir(models.Model):
+    adi = models.CharField(max_length=50)
+    ulke=models.ForeignKey(Ulke)
 class Konum(models.Model):
     enlem = models.FloatField()
     boylam = models.FloatField()

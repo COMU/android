@@ -11,7 +11,8 @@ from kullaniciHandler import KullaniciHandler
 from egitimDurumHandler import EgitimDurumuHandler
 from emailHandler import EmailHandler
 from aktiflestirHandler import Aktiflestir
-
+from aramaHandler import AramaHandler
+arama_handler = Resource(AramaHandler)
 aktiflestir = Resource(Aktiflestir)
 email_handler = Resource(EmailHandler)
 egitim_handler = Resource(EgitimDurumuHandler)
@@ -34,5 +35,5 @@ urlpatterns = patterns('',
      url(r'^sehir/', sehir_handler),
      url(r'^meslek/(?P<meslek_id>[^/]+)', meslek_handler),
      url(r'^meslekler/', meslek_handler),
-     url(r'^aktiflestir/', aktiflestir)
-)
+     url(r'^aktiflestir/', aktiflestir),
+     url(r'^arama/',arama_handler))

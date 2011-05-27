@@ -50,7 +50,7 @@ class KullaniciHandler(BaseHandler):
                 kullanici.dogrulama_id = params[4]
                 email = Email()
                 hashMd5 = Crypt()
-                email.gonder("Ahbap Onay Kodu", kullanici.parola, kullanici.dogrulama_id, kullanici.email )
+                #email.gonder("Ahbap Onay Kodu", kullanici.parola, kullanici.dogrulama_id, kullanici.email )
                 kullanici.parola = hashMd5.returnHash(kullanici.parola)
                 kullanici.save()
                 return rc.CREATED

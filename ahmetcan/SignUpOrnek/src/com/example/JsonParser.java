@@ -75,6 +75,19 @@ public class JsonParser {
 			
 		}
 	}
+	public static void returnMeslekler(String meslekler,List<String> meslek){
+		try{
+			JSONArray jsonMeslek=new JSONArray(meslekler);
+			for(int i=0;i<jsonMeslek.length();i++){
+				meslek.add(jsonMeslek.getJSONObject(i).getString("adi"));
+			}
+		}
+		catch(Exception e) {
+			
+			
+		}
+		
+	}
 	public static void returnAranan(String arananlar,List<String>aranan){
 		
 		try{

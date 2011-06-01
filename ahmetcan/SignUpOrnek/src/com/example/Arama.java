@@ -3,6 +3,8 @@ package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,13 +24,16 @@ public class Arama extends Activity {
 	private Bundle extras;
 	private List<String> ulke;
 	private List<String> sehir;
+	private List<String> meslek;
 	List<String> bulunanlar_list;
 	private Button ara;
 	private ListView bulunanlar;
 	String sehirler;
 	String ulke_adi;
+	String meslekler;
 	AutoCompleteTextView textView1 ;
 	AutoCompleteTextView textView2 ;
+	AutoCompleteTextView textView3;
 	WebService webservice;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,20 @@ public class Arama extends Activity {
 			return false;
 		}
 	});
+	textView3 = (AutoCompleteTextView) findViewById(R.id.autocomplete_job);
+	textView3.setOnTouchListener(new OnTouchListener() {
+		
+		public boolean onTouch(View v, MotionEvent event) {
+			// TODO Auto-generated method stub
+			meslek=new ArrayList<String>();
+			meslekler=webservice.getMeslekler(extras.getString("email"), extras.getString("parola"));
+			JsonParser.returnMeslekler(meslekler, meslek);
+			ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(Arama.this, R.layout.list_item, meslek);
+			textView3.setAdapter(adapter3);
+			return false;
+		}
+	});
+	
 	ara=(Button)findViewById(R.id.ara);
 	ara.setOnClickListener(new OnClickListener() {
 		
@@ -69,7 +88,8 @@ public class Arama extends Activity {
 			// TODO Auto-generated method stub
 			String sehir_adi=textView2.getText().toString();
 			 bulunanlar_list=new ArrayList<String>();
-			String bulunan=webservice.getArananKisi(extras.getString("email"), extras.getString("parola"), ulke_adi, sehir_adi);
+			 meslekler=textView3.getText().toString();
+			String bulunan=webservice.getArananKisi(extras.getString("email"), extras.getString("parola"), ulke_adi, sehir_adi,meslekler);
 			JsonParser.returnAranan(bulunan, bulunanlar_list);
 			ArrayAdapter<String>adapter3=new ArrayAdapter<String>(Arama.this, R.layout.list_item,bulunanlar_list);
 			Arama.this.bulunanlar.setAdapter(adapter3);

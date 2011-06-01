@@ -34,6 +34,7 @@ public class WebService {
 	private String ULKE_URL="http://10.0.2.2:8000/api/ulke/";
 	private String SEHIR_URL="http://10.0.2.2:8000/api/sehir/";
 	private String ARAMA_URL="http://10.0.2.2:8000/api/arama/";
+	private String MESLEK_URL="http://10.0.2.2:8000/api/meslekler/";
 	private HttpClient client;
 	private HttpPost post;
 	private HttpPut put;
@@ -286,7 +287,7 @@ public class WebService {
 	public String getUlkeler(String email,String parola){
 		String sonuc = "";
 		String key = db.getKey();
-		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
+		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key+"&"+"bes=5";
 		try {
 			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
 			
@@ -323,10 +324,33 @@ public class WebService {
 		return sonuc;
 		
 	}
-	public String getArananKisi(String email,String parola,String ulke_adi,String sehir_adi){
+	
+	
+	public String getMeslekler(String email,String parola){
+		String sonuc = "";
+		String key = db.getKey();
+		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
+		try {
+			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
+			
+			Log.i("base64", s);
+			get = new HttpGet(MESLEK_URL + "?param=" + s);
+			
+			response = client.execute(get);
+			sonuc = EntityUtils.toString(response.getEntity());
+		} catch (Exception e) {
+			Log.i("GET", e.getMessage());
+			e.printStackTrace();
+		}
+		return sonuc;
+		
+	}
+	
+	
+	public String getArananKisi(String email,String parola,String ulke_adi,String sehir_adi,String meslek_adi){
 		String sonuc="";
 		String key=db.getKey();
-		String params="email="+email+"&"+"parola="+parola+"&"+"key="+key+"&"+"ulke="+ulke_adi+"&"+"sehir_adi="+sehir_adi;
+		String params="email="+email+"&"+"parola="+parola+"&"+"key="+key+"&"+"ulke="+ulke_adi+"&"+"sehir_adi="+sehir_adi+"&"+"meslek_adi="+meslek_adi;
 		try{
 			String s=android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
 			get=new HttpGet(ARAMA_URL+"?param="+s);

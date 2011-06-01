@@ -20,12 +20,27 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"/>
+        
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/meslek" />
+    <AutoCompleteTextView android:id="@+id/autocomplete_job"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"/>
+        
+        
 	<ListView
 		android:id="@+id/aranan"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content">
 	
 	</ListView>
+	
+
+	
+	
 	<Button
 		android:id="@+id/ara"
 		android:layout_height="wrap_content"

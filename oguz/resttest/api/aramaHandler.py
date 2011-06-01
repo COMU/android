@@ -19,6 +19,7 @@ class AramaHandler(BaseHandler):
                         parola=liste[1],
                         dogrulama_id=liste[2],
                         durum=True)
-                return Kullanici.objects.filter(konum = Konum.objects.filter(sehir = Sehir.objects.filter(adi = liste[4]), ulke = Ulke.objects.filter(adi = liste[3])))
+                return Kullanici.objects.filter(konum = Konum.objects.filter(sehir = Sehir.objects.filter(adi = liste[4]), ulke = Ulke.objects.filter(adi = liste[3])),
+                        kullanici_detaylari=KullaniciDetaylari.objects.filter(meslek=Meslek.objects.filter(adi=liste[5])))
             except:
                 return -1

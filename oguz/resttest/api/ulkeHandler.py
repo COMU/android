@@ -20,7 +20,7 @@ class UlkeHandler(BaseHandler):
                                             parola = liste[1],
                                             dogrulama_id = liste[2],
                                             durum = True)
-            if len(liste)!=3:
+            if len(liste)==3:
                 return kullanici.konum.ulke
             else:
                 return Ulke.objects.all()

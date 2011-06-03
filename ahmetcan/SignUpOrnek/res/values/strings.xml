@@ -31,4 +31,5 @@
 	<string name="CountryFind">Ulke Seciniz</string>
 	<string name="CityFind">Sehir Seciniz</string>
 	<string name="ara">Ara</string>
+	<string name="kullanici_detay">Kullanici Detaylari</string>
 </resources>

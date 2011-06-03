@@ -42,12 +42,14 @@
   		android:text="@string/Name"
   		android:textColor="#000000"
   	/>
+  	
   	<TextView
   		android:id="@+id/kullaniciText2"
   		android:layout_width="wrap_content"
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciText"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   	<Button
   		android:id="@+id/degistir"
@@ -73,6 +75,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciText3"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   	<Button
   		android:id="@+id/degistir2"
@@ -98,6 +101,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciText5"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   	<Button
   		android:id="@+id/degistir3"
@@ -124,6 +128,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciTextd1"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   	<Button
   		android:id="@+id/tarihButton"
@@ -149,6 +154,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciTextp1"
   		android:text="******"
+  		android:textColor="#990000"
   	/>
   	<Button
   		android:id="@+id/parolaButton"
@@ -219,6 +225,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciText11"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   
   	</RelativeLayout>
@@ -238,6 +245,7 @@
   		android:layout_height="wrap_content"
   		android:layout_below="@id/kullaniciText13"
   		android:text=" "
+  		android:textColor="#990000"
   	/>
   
   	</RelativeLayout>
@@ -247,6 +255,12 @@
   		android:layout_height="wrap_content"
   		android:text="@string/location"
   		android:paddingTop="10dip"
+  	/>
+  	<Button
+  	android:id="@+id/kullanici_detaylari"
+  	android:layout_width="match_parent"
+  	android:layout_height="wrap_content"
+  	android:text="@string/kullanici_detay"
   	/>
   		<Button
   		android:id="@+id/kaydet"

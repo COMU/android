@@ -173,6 +173,7 @@ public class Profil extends Activity {
 				extras.getString("parola"));
 		String sehirStr = service.getSehir(extras.getString("email"),
 				extras.getString("parola"));
+		
 
 		if (konumStr.equals("-1")) {
 			return;

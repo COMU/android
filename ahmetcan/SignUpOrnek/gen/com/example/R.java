@@ -28,13 +28,13 @@ public final class R {
         public static final int autocomplete_city=0x7f050001;
         public static final int autocomplete_country=0x7f050000;
         public static final int autocomplete_job=0x7f050002;
-        public static final int button=0x7f050024;
+        public static final int button=0x7f050025;
         public static final int degistir=0x7f050010;
         public static final int degistir0=0x7f05000d;
         public static final int degistir2=0x7f050013;
         public static final int degistir3=0x7f050016;
         public static final int email=0x7f050005;
-        public static final int kaydet=0x7f050022;
+        public static final int kaydet=0x7f050023;
         public static final int konum=0x7f050021;
         public static final int kullaniciText=0x7f05000e;
         public static final int kullaniciText11=0x7f05001d;
@@ -50,6 +50,7 @@ public final class R {
         public static final int kullaniciTextd2=0x7f050018;
         public static final int kullaniciTextp1=0x7f05001a;
         public static final int kullaniciTextp2=0x7f05001b;
+        public static final int kullanici_detaylari=0x7f050022;
         public static final int lastName=0x7f05000a;
         public static final int loginButton=0x7f050007;
         public static final int name=0x7f050009;
@@ -59,7 +60,7 @@ public final class R {
         public static final int profil_image=0x7f05000c;
         public static final int singButton=0x7f050008;
         public static final int tarihButton=0x7f050019;
-        public static final int webview=0x7f050023;
+        public static final int webview=0x7f050024;
     }
     public static final class layout {
         public static final int a=0x7f030000;
@@ -94,6 +95,7 @@ public final class R {
         public static final int image=0x7f04000e;
         public static final int kaydet=0x7f040019;
         public static final int konumBilgileri=0x7f040017;
+        public static final int kullanici_detay=0x7f04001f;
         public static final int lastName=0x7f040006;
         public static final int location=0x7f040010;
         public static final int login=0x7f040003;

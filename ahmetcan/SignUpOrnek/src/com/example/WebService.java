@@ -15,8 +15,6 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
@@ -176,6 +174,25 @@ public class WebService {
 		
 		return sonuc;
 	}
+	public String getKonum(String email,String parola,String key){
+		String sonuc = "";
+		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
+		try {
+			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
+			
+			Log.i("base64", s);
+			get = new HttpGet(KONUM_URL + "?param=" + s);
+			
+			response = client.execute(get);
+			sonuc = EntityUtils.toString(response.getEntity());
+		} catch (Exception e) {
+			Log.i("GET", e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		return sonuc;
+	}
 	public String getUlke(String email,String parola){
 		String sonuc = "";
 		String key = db.getKey();
@@ -196,9 +213,47 @@ public class WebService {
 		
 		return sonuc;
 	}
+	public String getUlke(String email,String parola,String key){
+		String sonuc = "";
+		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
+		try {
+			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
+			
+			Log.i("base64", s);
+			get = new HttpGet(ULKE_URL + "?param=" + s);
+			
+			response = client.execute(get);
+			sonuc = EntityUtils.toString(response.getEntity());
+		} catch (Exception e) {
+			Log.i("GET", e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		return sonuc;
+	}
 	public String getSehir(String email,String parola){
 		String sonuc = "";
 		String key = db.getKey();
+		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
+		try {
+			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
+			
+			Log.i("base64", s);
+			get = new HttpGet(SEHIR_URL + "?param=" + s);
+			
+			response = client.execute(get);
+			sonuc = EntityUtils.toString(response.getEntity());
+		} catch (Exception e) {
+			Log.i("GET", e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		return sonuc;
+	}
+	public String getSehir(String email,String parola,String key){
+		String sonuc = "";
 		String params = "email=" + email + "&" + "parola=" + parola + "&" +"key=" + key;
 		try {
 			String s = android.util.Base64.encodeToString(params.getBytes("UTF-8"), Base64.NO_WRAP);
@@ -303,7 +358,7 @@ public class WebService {
 		return sonuc;
 		
 	}
-	
+
 	
 	public String getSehirler(String email,String parola,String ulke_adi){
 		String sonuc = "";

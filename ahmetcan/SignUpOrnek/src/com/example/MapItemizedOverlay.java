@@ -33,9 +33,7 @@ public class MapItemizedOverlay extends ItemizedOverlay {
 	    populate();
 	}
 	
-	public boolean onTap(int index){
-		return true;
-	}
+	
 	
 
 }

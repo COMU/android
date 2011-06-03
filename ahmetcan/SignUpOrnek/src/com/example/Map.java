@@ -47,8 +47,8 @@ public class Map extends MapActivity{
 	}
 	public void addOverlays(){
 		for (int i=0;i<konumlar.size();i++){
-			Double latitude = konumlar.get(i).getEnlem() * 1e6;
-			Double longitude = konumlar.get(i).getBoylam() * 1e6;
+			Double latitude = new Double(konumlar.get(i).getEnlem() * 1e6);
+			Double longitude = new Double(konumlar.get(i).getBoylam() * 1e6);
 			GeoPoint g = new GeoPoint(latitude.intValue(), longitude.intValue() );
 			OverlayItem overlayitem = new OverlayItem(g, bulunanlar.get(i).getAdi() + " " 
 					+ bulunanlar.get(i).getSoyad(), "Daha neler?");

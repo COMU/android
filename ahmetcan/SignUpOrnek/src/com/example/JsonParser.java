@@ -103,7 +103,7 @@ public class JsonParser {
 				kullanici.setParola(jsonAranan.getJSONObject(i).getString("parola"));
 				kullanici.setDogumTarihi(jsonAranan.getJSONObject(i)
 						.getString("dogum_tarihi"));
-				kullanici.setAdi(jsonAranan.getJSONObject(i).getString("dogrulama_id"));
+				kullanici.setDetayId(jsonAranan.getJSONObject(i).getString("dogrulama_id"));
 				aranan.add(kullanici);
 
 			}

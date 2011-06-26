@@ -25,9 +25,9 @@ class Meslek(models.Model):
     adi = models.CharField(max_length=50)
 
 class KullaniciDetaylari(models.Model):
+    cinsiyet=models.CharField(max_length=10)
     meslek = models.ForeignKey(Meslek)
     egitim_durumu = models.ForeignKey(EgitimDurumu)
-    ilgi_alanlari = models.ForeignKey(IlgiAlanlari)
 class KullaniciResmi(models.Model):
     kaynak = models.ImageField(upload_to = 'images')
 class Kullanici(models.Model):

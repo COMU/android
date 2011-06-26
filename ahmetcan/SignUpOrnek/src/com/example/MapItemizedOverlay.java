@@ -1,6 +1,6 @@
 package com.example;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -36,4 +36,4 @@ public class MapItemizedOverlay extends ItemizedOverlay {
 	
 	
 
-}
+}*/

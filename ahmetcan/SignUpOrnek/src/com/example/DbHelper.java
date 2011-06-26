@@ -1,33 +1,47 @@
 package com.example;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.util.Log;
 
 public class DbHelper {
 	private static final String DATABASE_NAME = "ahbap.db";
 	private static final int DATABASE_VERSION = 1;
 	private static final String TABLE_NAME = "KeyTable";
-	private static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME
-			+ " ( " + "  \"Id\" INTEGER PRIMARY KEY," + "  \"Key\" TEXT" + ")";
-	private static final String TABLE_INSERT = "INSERT INTO " + TABLE_NAME
-			+ " (Key) VALUES (?)";
+
+	
+	 private static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME + " ( "
+     + "  \"Id\" INTEGER PRIMARY KEY,"
+     + "  \"Key\" TEXT," + ")";
+		
 	private Context context;
 	private SQLiteDatabase database;
 	private SQLiteStatement insertSQLiteStatement;
 
+
+	private static final String TABLE_INSERT = "INSERT INTO " + TABLE_NAME + " (Key) VALUES (?)";
+
+	
 	public DbHelper(Context context) {
 		this.context = context;
 		DbOpenHelper dbOpenHelper = new DbOpenHelper(this.context);
 		database = dbOpenHelper.getWritableDatabase();
 		insertSQLiteStatement = database.compileStatement(TABLE_INSERT);
-	}
 
+	}
+	
+	public long insertUser(String username) {
+		if (username.equals("")) {
+			return -1;
+		}
+		insertSQLiteStatement.bindString(2, username);
+		return insertSQLiteStatement.executeInsert();
+	}
+	
+	
 	public long insertKey(String key) {
 		if (key.equals("")) {
 			return -1;
@@ -39,6 +53,9 @@ public class DbHelper {
 		database.close();
 		database = null;
 	}
+	
+	
+	
 	public String getKey() {
 		Cursor cursor = database.query(TABLE_NAME, new String[] { "id,Key" },
 				null, null, null, null, "id desc");
@@ -64,6 +81,7 @@ public class DbHelper {
 		@Override
 		public void onCreate(SQLiteDatabase db) {
 			db.execSQL(TABLE_CREATE);
+		
 		}
 
 		@Override

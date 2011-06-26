@@ -95,9 +95,9 @@ public class Arama extends Activity {
 				String bulunan = webservice.getArananKisi(
 						extras.getString("email"), extras.getString("parola"),
 						ulke_adi, sehir_adi, meslekler);
-				Intent intent = new Intent(getApplicationContext(), Map.class);
-				intent.putExtra("bulunanlar", bulunan);
-				startActivity(intent);
+			//	Intent intent = new Intent(getApplicationContext(), Map.class);
+			//	intent.putExtra("bulunanlar", bulunan);
+			//	startActivity(intent);
 				/*JsonParser.returnAranan(bulunan, bulunanlar_list);		
 				ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(
 						Arama.this, R.layout.list_item, bulunanlar_list);

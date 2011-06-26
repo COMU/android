@@ -14,7 +14,7 @@ public class Kullanici {
 	private String parola;
 	private String resimId;
 	private String detayId;
-	
+
 	
 	public String getDetayId() {
 		return detayId;

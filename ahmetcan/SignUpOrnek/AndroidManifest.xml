@@ -24,14 +24,18 @@
         	android:name=".SingUp"
         	android:theme="@android:style/Theme.Dialog"></activity>
         <activity
+        	android:name=".Egitim"
+        	android:theme="@android:style/Theme.Dialog"></activity>
+        <activity
         	android:name=".Activate"
+        	android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+        	android:name=".KullaniciDetaylari"
         	android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity
         	android:name=".Profil"
         	android:theme="@android:style/Theme.NoTitleBar"></activity>
-        	 <activity
-        	android:name=".A"
-        	android:theme="@android:style/Theme.NoTitleBar"></activity>
+ 
          <activity
         	android:name=".Map"
         	android:theme="@android:style/Theme.NoTitleBar"></activity>

@@ -33,6 +33,7 @@ public class WebService {
 	private String SEHIR_URL="http://10.0.2.2:8000/api/sehir/";
 	private String ARAMA_URL="http://10.0.2.2:8000/api/arama/";
 	private String MESLEK_URL="http://10.0.2.2:8000/api/meslekler/";
+	private String DETAY_URL="http://10.0.2.2:8000/api/detay/";
 	private HttpClient client;
 	private HttpPost post;
 	private HttpPut put;
@@ -99,6 +100,9 @@ public class WebService {
 		return sonuc;
 		
 	}
+	
+	
+	
 	public String addUser(Kullanici user){
 		post= new HttpPost(KULLANICI_URL);
 		String param = "ad=" + user.getAdi() + "&" + "soyad=" + user.getSoyad() + "&" 
@@ -418,5 +422,61 @@ public class WebService {
 		return sonuc;
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String addKullaniciDetaylari(String email, String parola,Detay detay){
+		String sonuc = "";
+		post = new HttpPost(DETAY_URL);
+		String param = "dogrulama_id=" + db.getKey() + "&" + "email=" + email  + "&" + "parola=" + parola 
+						+ "&" + "cinsiyet=" + "erkek" + "&" + "egitim=" + "universite" + "&" 
+						+ "meslek=" + "muhendis";
+		List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+		nvps.add(new BasicNameValuePair("params", Base64.encodeToString(param.getBytes(), Base64.NO_WRAP)));
+		try {
+			post.setEntity(new UrlEncodedFormEntity(nvps));
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		results = null;
+		try {
+			
+			response=client.execute(post);
+			sonuc=EntityUtils.toString(response.getEntity());
+//			Toast.makeText(getApplicationContext(), sonuc, Toast.LENGTH_LONG).show();
+		} catch (Exception e) {
+			
+		} finally {
+			if (results!=null)
+				try {
+					results.consumeContent();
+				} catch (IOException e) {
+					// empty, Checked exception but don't care));
+//			        nvps.add(new BasicNameValuePair("ulke_adi", "Turkiye"));
+				}
+		}
+		return sonuc;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

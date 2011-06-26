@@ -9,16 +9,17 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Login extends Activity{
 	private ApplicationService service;
 	private EditText email;
 	private EditText parola;
-	
+	private DbHelper db;
 	public void onCreate(Bundle savedInstance){
 		super.onCreate(savedInstance);
 		setContentView(R.layout.login);
-		
+	
 		service = new ApplicationService(getApplicationContext());
 		email = (EditText)findViewById(R.id.email);
 		parola = (EditText)findViewById(R.id.parola);
@@ -33,15 +34,19 @@ public class Login extends Activity{
 		
 		
 		public void onClick(View v) {
+			
 			String mail = email.getText().toString();
+			
 			String paro = parola.getText().toString();
 			if(!mail.equals("") && !paro.equals("")){
 				//if(service.login(mail,Mda5.getMD5(paro))){
 				if(true){
 					Intent intent =new Intent(Login.this, Ahbap.class);
 					intent.putExtra("email", mail);
+					//db.insertUser(email.getText().toString());
 					intent.putExtra("parola", Mda5.getMD5(paro));
 					startActivity(intent);
+				
 					finish();
 				}else{
 					showAlert("Olmadi be ahbap");

@@ -44,6 +44,7 @@ public class Profil extends Activity {
 	private Location currentLocation;
 	private MyLocationManager locationManager;
 	private Button kaydet;
+	private Button kullaniciDetay;
 	private Geocoderapi geocoder;
 	private myAddress address;
 	private Coordinates coordinate;
@@ -79,10 +80,22 @@ public class Profil extends Activity {
 		parolaDegistir.setOnClickListener(parolaListener);
 		konumGuncelle = (Button) findViewById(R.id.konum);
 		konumGuncelle.setOnClickListener(konumListener);
+		kullaniciDetay=(Button)findViewById(R.id.kullanici_detaylari);
 		profil_photo=(ImageView)findViewById(R.id.profil_image);
 		setUserText();
 		setLocationText();
 		kaydet = (Button) findViewById(R.id.kaydet);
+		kullaniciDetay.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(Profil.this,KullaniciDetaylari.class);
+			    intent.putExtra("email", extras.getString("email"));
+			    intent.putExtra("parola", extras.getString("parola"));
+				startActivity(intent);
+				
+			}
+		});
 		kaydet.setOnClickListener(new OnClickListener() {
 
 		

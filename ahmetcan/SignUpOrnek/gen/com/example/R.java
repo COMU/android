@@ -8,6 +8,10 @@
 package com.example;
 
 public final class R {
+    public static final class array {
+        public static final int eduStatus=0x7f050001;
+        public static final int profession=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -23,62 +27,82 @@ public final class R {
         public static final int profile_tab=0x7f020009;
     }
     public static final class id {
-        public static final int ara=0x7f050004;
-        public static final int aranan=0x7f050003;
-        public static final int autocomplete_city=0x7f050001;
-        public static final int autocomplete_country=0x7f050000;
-        public static final int autocomplete_job=0x7f050002;
-        public static final int button=0x7f050026;
-        public static final int degistir=0x7f050011;
-        public static final int degistir0=0x7f05000e;
-        public static final int degistir2=0x7f050014;
-        public static final int degistir3=0x7f050017;
-        public static final int email=0x7f050005;
-        public static final int kaydet=0x7f050024;
-        public static final int konum=0x7f050022;
-        public static final int kullaniciText=0x7f05000f;
-        public static final int kullaniciText11=0x7f05001e;
-        public static final int kullaniciText12=0x7f05001f;
-        public static final int kullaniciText13=0x7f050020;
-        public static final int kullaniciText14=0x7f050021;
-        public static final int kullaniciText2=0x7f050010;
-        public static final int kullaniciText3=0x7f050012;
-        public static final int kullaniciText4=0x7f050013;
-        public static final int kullaniciText5=0x7f050015;
-        public static final int kullaniciText6=0x7f050016;
-        public static final int kullaniciTextd1=0x7f050018;
-        public static final int kullaniciTextd2=0x7f050019;
-        public static final int kullaniciTextp1=0x7f05001b;
-        public static final int kullaniciTextp2=0x7f05001c;
-        public static final int kullanici_detaylari=0x7f050023;
-        public static final int lastName=0x7f05000a;
-        public static final int loginButton=0x7f050007;
-        public static final int mapview=0x7f05000c;
-        public static final int name=0x7f050009;
-        public static final int ok_button=0x7f05000b;
-        public static final int parola=0x7f050006;
-        public static final int parolaButton=0x7f05001d;
-        public static final int profil_image=0x7f05000d;
-        public static final int singButton=0x7f050008;
-        public static final int tarihButton=0x7f05001a;
-        public static final int webview=0x7f050025;
+        public static final int Age=0x7f060005;
+        public static final int EduStatus=0x7f06000c;
+        public static final int Gender=0x7f060008;
+        public static final int InterestArea=0x7f06000f;
+        public static final int Profession=0x7f060012;
+        public static final int ageShow=0x7f060006;
+        public static final int ara=0x7f060004;
+        public static final int aranan=0x7f060003;
+        public static final int autocomplete_city=0x7f060001;
+        public static final int autocomplete_country=0x7f060000;
+        public static final int autocomplete_job=0x7f060002;
+        public static final int button=0x7f060036;
+        public static final int degistir=0x7f060021;
+        public static final int degistir0=0x7f06001e;
+        public static final int degistir2=0x7f060024;
+        public static final int degistir3=0x7f060027;
+        public static final int edStatusEdit=0x7f06000d;
+        public static final int editAge=0x7f060007;
+        public static final int editInterest=0x7f060010;
+        public static final int editProfession=0x7f060013;
+        public static final int eduStatus=0x7f06000b;
+        public static final int email=0x7f060015;
+        public static final int genderEdit=0x7f06000a;
+        public static final int genderShow=0x7f060009;
+        public static final int interestArea=0x7f06000e;
+        public static final int kaydet=0x7f060034;
+        public static final int konum=0x7f060032;
+        public static final int kullaniciText=0x7f06001f;
+        public static final int kullaniciText11=0x7f06002e;
+        public static final int kullaniciText12=0x7f06002f;
+        public static final int kullaniciText13=0x7f060030;
+        public static final int kullaniciText14=0x7f060031;
+        public static final int kullaniciText2=0x7f060020;
+        public static final int kullaniciText3=0x7f060022;
+        public static final int kullaniciText4=0x7f060023;
+        public static final int kullaniciText5=0x7f060025;
+        public static final int kullaniciText6=0x7f060026;
+        public static final int kullaniciTextd1=0x7f060028;
+        public static final int kullaniciTextd2=0x7f060029;
+        public static final int kullaniciTextp1=0x7f06002b;
+        public static final int kullaniciTextp2=0x7f06002c;
+        public static final int kullanici_detaylari=0x7f060033;
+        public static final int lastName=0x7f06001a;
+        public static final int loginButton=0x7f060017;
+        public static final int mapview=0x7f06001c;
+        public static final int name=0x7f060019;
+        public static final int ok_button=0x7f06001b;
+        public static final int parola=0x7f060016;
+        public static final int parolaButton=0x7f06002d;
+        public static final int profession=0x7f060011;
+        public static final int profil_image=0x7f06001d;
+        public static final int saveDetail=0x7f060014;
+        public static final int singButton=0x7f060018;
+        public static final int tarihButton=0x7f06002a;
+        public static final int webview=0x7f060035;
     }
     public static final class layout {
-        public static final int a=0x7f030000;
-        public static final int ahbap=0x7f030001;
-        public static final int arama=0x7f030002;
-        public static final int list_item=0x7f030003;
-        public static final int login=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int map=0x7f030006;
-        public static final int mesaj=0x7f030007;
-        public static final int profil=0x7f030008;
-        public static final int web=0x7f030009;
+        public static final int ahbap=0x7f030000;
+        public static final int arama=0x7f030001;
+        public static final int detay=0x7f030002;
+        public static final int egitim=0x7f030003;
+        public static final int list_item=0x7f030004;
+        public static final int list_item2=0x7f030005;
+        public static final int login=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int map=0x7f030008;
+        public static final int mesaj=0x7f030009;
+        public static final int profil=0x7f03000a;
+        public static final int web=0x7f03000b;
     }
     public static final class string {
+        public static final int Age=0x7f040020;
         public static final int CityFind=0x7f04001d;
         public static final int CountryFind=0x7f04001c;
         public static final int EducationFind=0x7f04001a;
+        public static final int Gender=0x7f040021;
         public static final int GenderFind=0x7f04001b;
         public static final int Name=0x7f040005;
         public static final int activate=0x7f040009;
@@ -89,12 +113,14 @@ public final class R {
         public static final int change=0x7f04000f;
         public static final int detail=0x7f040011;
         public static final int dogumTarihi=0x7f040018;
+        public static final int eduStatus=0x7f040022;
         public static final int email=0x7f040001;
         public static final int emailError=0x7f04000c;
         public static final int emptyField=0x7f040008;
         public static final int enlem=0x7f040012;
         public static final int exit=0x7f04000d;
         public static final int image=0x7f04000e;
+        public static final int interestArea=0x7f040024;
         public static final int kaydet=0x7f040019;
         public static final int konumBilgileri=0x7f040017;
         public static final int kullanici_detay=0x7f04001f;
@@ -103,6 +129,7 @@ public final class R {
         public static final int login=0x7f040003;
         public static final int meslek=0x7f040016;
         public static final int password=0x7f040002;
+        public static final int profession=0x7f040023;
         public static final int returnApp=0x7f04000a;
         public static final int sehir=0x7f040014;
         public static final int signUp=0x7f040004;

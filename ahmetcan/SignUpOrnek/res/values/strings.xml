@@ -32,4 +32,35 @@
 	<string name="CityFind">Sehir Seciniz</string>
 	<string name="ara">Ara</string>
 	<string name="kullanici_detay">Kullanici Detaylari</string>
+	<string name="Age">Yas</string>
+	<string name="Gender">Cinsiyet</string>
+	<string name="eduStatus">Egitim Durumu</string>
+	<string name="profession">Meslek</string>
+	<string name="interestArea">Ilgi Alanlari</string>
+	
+	
+	
+	
+	
+	<string-array name="profession">
+        <item>Avukat</item>
+        <item>Muhendis</item>
+        <item>Bankaci</item>
+        <item>Doktor</item>
+        <item>Dis Hekimi</item>
+        <item>Ogretmen</item>
+        <item>Mimar</item>
+        <item>Akademisyen</item>
+        <item>Diger</item>        
+    </string-array>
+	
+	<string-array name="eduStatus">
+        <item>Yok</item>
+        <item>Ilkokul</item>
+        <item>Ortaokul</item>
+        <item>Lise</item>
+        <item>Universite</item>
+    </string-array>
+	
+	
 </resources>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation = "vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+ >
+<ScrollView
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">-->
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation = "vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#FFFFFF"
+  android:padding="10dip">
+
+   	<RelativeLayout
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content">
+  	<TextView
+  		android:id="@+id/Age"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="@string/Age"
+  		android:textColor="#000000"
+  	/>
+  	
+  	<TextView
+  		android:id="@+id/ageShow"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/Age"
+  		android:text=" "
+  		android:textColor="#990000"
+  	/>
+  	<Button
+  		android:id="@+id/editAge"
+  	  	android:layout_width="30px"
+	  	android:layout_height="30px"
+	  	android:layout_alignParentRight="true"
+	  	android:background="@drawable/edit_icon"	  
+  	/>
+  	</RelativeLayout>
+  	<RelativeLayout
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content">
+  	<TextView
+  		android:id="@+id/Gender"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="@string/Gender"
+  		android:textColor="#000000"
+  	/>
+  	<TextView
+  		android:id="@+id/genderShow"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/Gender"
+  		android:text=" "
+  		android:textColor="#990000"
+  	/>
+  	<Button
+  		android:id="@+id/genderEdit"
+  	  	android:layout_width="30px"
+	  	android:layout_height="30px"
+	  	android:layout_alignParentRight="true"
+	  	android:background="@drawable/edit_icon"
+	  	android:onClick="openCinsiyetDuzenle" 
+  	/>
+  	</RelativeLayout>
+  	<RelativeLayout
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content">
+  	<TextView
+  		android:id="@+id/eduStatus"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="@string/eduStatus"
+  		android:textColor="#000000"
+  	/>
+  	<TextView
+  		android:id="@+id/EduStatus"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/eduStatus"
+  		android:text=" "
+  		android:textColor="#990000"
+  	/>
+  	<Button
+  		android:id="@+id/edStatusEdit"
+  	  	android:layout_width="30px"
+	  	android:layout_height="30px"
+	  	android:layout_alignParentRight="true"	
+	  	android:background="@drawable/edit_icon"  
+	  	android:onClick="openEgitimDuzenle"
+  	/>
+  	</RelativeLayout>
+  	
+  	<RelativeLayout
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content">
+  	<TextView
+  		android:id="@+id/interestArea"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="@string/interestArea"
+  		android:textColor="#000000"
+  	/>
+  	<TextView
+  		android:id="@+id/InterestArea"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@+id/interestArea"
+  		android:text=" "
+  		android:textColor="#990000"
+  	/>
+  	<Button
+  		android:id="@+id/editInterest"
+  	  	android:layout_width="30px"
+	  	android:layout_height="30px"
+	  	android:layout_alignParentRight="true"	
+	  	android:background="@drawable/edit_icon"  
+  	/>
+  	</RelativeLayout>
+  	<RelativeLayout
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content">
+  	<TextView
+  		android:id="@+id/profession"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:text="@string/profession"
+  		android:textColor="#000000"
+  	/>
+  	<TextView
+  		android:id="@+id/Profession"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/profession"
+  		android:text=""
+  		android:textColor="#990000"
+  	/>
+  	<Button
+  		android:id="@+id/editProfession"
+  	  	android:layout_width="30px"
+	  	android:layout_height="30px"
+	  	android:layout_alignParentRight="true"	
+	  	android:background="@drawable/edit_icon"  
+	  	android:onClick="openMeslekDuzenle"
+  	/>
+  	</RelativeLayout>
+  
+  
+  	<Button
+  		android:id="@+id/saveDetail"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:text="@string/kaydet"
+  		android:paddingTop="10dip"
+  	/>
+
+</LinearLayout><!-- 
+</ScrollView>
+</LinearLayout>-->
